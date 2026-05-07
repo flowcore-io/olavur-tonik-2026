@@ -1,0 +1,4 @@
+dist/*.png
+dist/pdf-preview/
+dist/screens/
+.DS_Store
