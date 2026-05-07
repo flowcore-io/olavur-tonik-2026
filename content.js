@@ -1,7 +1,7 @@
 window.TONIK_TALK = {
   title: "Same AI. Different Results.",
   subtitle: "Why your agents need their own knowledge base.",
-  speaker: "Olavur Ellefsen",
+  speaker: "Olavur Ellefsen, CEO and co-founder of Usable",
   event: "Tonik 2026 · Tórshavn · 8 May 2026",
   slides: [
     {
@@ -13,7 +13,7 @@ window.TONIK_TALK = {
           <p class="eyebrow">TONIK 2026 · KEYNOTE</p>
           <h1>Same AI.<br><span>Different Results.</span></h1>
           <p class="subtitle">Why your agents need their own knowledge base.</p>
-          <p class="meta">Olavur Ellefsen · Flowcore / Usable</p>
+          <p class="meta">Olavur Ellefsen · CEO and co-founder of Usable</p>
         </div>
         <img class="cover-art" src="./assets/knowledge-tree.png" alt="Knowledge tree made of connected digital branches">
       `,

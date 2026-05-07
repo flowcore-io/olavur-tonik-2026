@@ -1,6 +1,6 @@
 # Same AI. Different Results.
 
-Tonik 2026 keynote deck for Olavur Ellefsen.
+Tonik 2026 keynote deck for Olavur Ellefsen, CEO and co-founder of Usable.
 
 ## Local Viewing
 
