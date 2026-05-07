@@ -24,8 +24,17 @@ mkdir -p "$ROOT/dist"
   --disable-gpu \
   --allow-file-access-from-files \
   --no-pdf-header-footer \
-  --print-to-pdf="$ROOT/dist/same-ai-different-results-speaker-cards.pdf" \
+  --print-to-pdf="$ROOT/dist/same-ai-different-results-speaker-cards-a5.pdf" \
   "file://$ROOT/cards.html?print=cards"
 
+"$CHROME" \
+  --headless \
+  --disable-gpu \
+  --allow-file-access-from-files \
+  --no-pdf-header-footer \
+  --print-to-pdf="$ROOT/dist/same-ai-different-results-speaker-cards.pdf" \
+  "file://$ROOT/cards.html?print=cards-2up"
+
 echo "$ROOT/dist/same-ai-different-results-slides.pdf"
+echo "$ROOT/dist/same-ai-different-results-speaker-cards-a5.pdf"
 echo "$ROOT/dist/same-ai-different-results-speaker-cards.pdf"

@@ -28,6 +28,7 @@ Generate the backup PDFs:
 Outputs:
 
 - `dist/same-ai-different-results-slides.pdf`
-- `dist/same-ai-different-results-speaker-cards.pdf`
+- `dist/same-ai-different-results-speaker-cards.pdf` — A4 portrait, two A5 cards per page for printing and cutting
+- `dist/same-ai-different-results-speaker-cards-a5.pdf` — one A5 landscape card per page
 
-`cards.html` is the printable card view: 20 one-minute A5 landscape speaker cards.
+`cards.html` is the speaker-card view. Use `cards.html?print=cards-2up` for the A4 two-up print layout, or `cards.html?print=cards` for one A5 card per page.

@@ -1,4 +1,5 @@
 dist/*.png
+dist/cards-2up*/
 dist/pdf-preview*/
 dist/pdf-pages*/
 dist/screens/

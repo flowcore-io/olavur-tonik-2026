@@ -6,6 +6,7 @@
 
   if (printMode === "slides") document.body.classList.add("print-slides");
   if (printMode === "cards") document.body.classList.add("print-cards");
+  if (printMode === "cards-2up") document.body.classList.add("print-cards-2up");
 
   const esc = (value) =>
     String(value)
@@ -108,20 +109,33 @@
 
   function renderCards() {
     const cards = document.getElementById("cards");
-    cards.innerHTML = talk.cards
-      .map(
-        (card, index) => `
-          <article class="speaker-card">
-            <header>
-              <p>${esc(card.slide)} · ${esc(card.minute)}</p>
-              <span>${String(index + 1).padStart(2, "0")} / ${String(talk.cards.length).padStart(2, "0")}</span>
-            </header>
-            <h1>${esc(card.title)}</h1>
-            <p>${esc(card.text)}</p>
-          </article>
-        `,
-      )
-      .join("");
+    const cardHtml = (card, index) => `
+      <article class="speaker-card">
+        <header>
+          <p>${esc(card.slide)} · ${esc(card.minute)}</p>
+          <span>${String(index + 1).padStart(2, "0")} / ${String(talk.cards.length).padStart(2, "0")}</span>
+        </header>
+        <h1>${esc(card.title)}</h1>
+        <p>${esc(card.text)}</p>
+      </article>
+    `;
+
+    if (printMode === "cards-2up") {
+      const sheets = [];
+      for (let index = 0; index < talk.cards.length; index += 2) {
+        sheets.push(`
+          <section class="a4-card-sheet">
+            ${cardHtml(talk.cards[index], index)}
+            <div class="cut-line" aria-hidden="true"></div>
+            ${talk.cards[index + 1] ? cardHtml(talk.cards[index + 1], index + 1) : ""}
+          </section>
+        `);
+      }
+      cards.innerHTML = sheets.join("");
+      return;
+    }
+
+    cards.innerHTML = talk.cards.map(cardHtml).join("");
   }
 
   if (mode === "deck") renderDeck();

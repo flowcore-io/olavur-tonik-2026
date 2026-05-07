@@ -677,8 +677,8 @@ body.print-cards .cards {
 }
 
 body.print-cards .speaker-card {
-  width: 100vw;
-  height: 100vh;
+  width: 210mm;
+  height: 148mm;
   min-height: 0;
   padding: 15mm 17mm 13mm;
   page: card;
@@ -716,6 +716,69 @@ body.print-cards .speaker-card p {
   margin: 0;
 }
 
+@page a4cards {
+  size: A4 portrait;
+  margin: 0;
+}
+
 body.print-cards {
   background: var(--paper);
+}
+
+body.print-cards-2up {
+  background: var(--paper);
+}
+
+body.print-cards-2up .cards {
+  display: block;
+  padding: 0;
+}
+
+body.print-cards-2up .a4-card-sheet {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 210mm;
+  height: 297mm;
+  page: a4cards;
+  background: var(--paper);
+  break-after: page;
+  page-break-after: always;
+}
+
+body.print-cards-2up .a4-card-sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+body.print-cards-2up .speaker-card {
+  width: 210mm;
+  height: 148.5mm;
+  min-height: 0;
+  padding: 13mm 16mm 10mm;
+  box-shadow: none;
+  border-top-width: 8mm;
+}
+
+body.print-cards-2up .speaker-card h1 {
+  font-size: 24pt;
+}
+
+body.print-cards-2up .speaker-card p {
+  font-size: 14pt;
+  line-height: 1.31;
+}
+
+body.print-cards-2up .speaker-card header {
+  margin-bottom: 12px;
+  font-size: 11pt;
+}
+
+body.print-cards-2up .cut-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 148.5mm;
+  z-index: 2;
+  border-top: 0.35mm dashed rgba(23, 32, 42, 0.32);
 }
