@@ -72,7 +72,7 @@ window.TONIK_TALK = {
     {
       id: "agent-memory",
       className: "slide--memory",
-      cards: [7, 8, 9],
+      cards: [7, 8],
       html: `
         <div class="memory-copy">
           <p class="eyebrow">WHAT AGENTS NEED</p>
@@ -88,11 +88,60 @@ window.TONIK_TALK = {
       `,
     },
     {
-      id: "strategy-story",
-      className: "slide--story",
+      id: "usable-loop",
+      className: "slide--loop",
+      cards: [9],
+      html: `
+        <p class="eyebrow">THE SMALLEST LOOP</p>
+        <h2>One loop forgets.<br><span>One loop compounds.</span></h2>
+        <div class="loop-grid">
+          <section class="loop-panel loop-panel--forget">
+            <p class="loop-label">Without a memory layer</p>
+            <div class="loop-cycle loop-cycle--simple" aria-label="Ask, get answer, forget">
+              <div class="loop-node loop-node--ask"><strong>Ask</strong><span>?</span></div>
+              <div class="loop-node loop-node--answer"><strong>Get answer</strong><span>✓</span></div>
+              <div class="loop-node loop-node--forget">
+                <strong>Forget</strong>
+                <span class="fishbowl" aria-hidden="true"><i></i></span>
+              </div>
+            </div>
+          </section>
+          <section class="loop-panel loop-panel--usable">
+            <p class="loop-label">With Usable</p>
+            <div class="loop-cycle loop-cycle--usable" aria-label="Ask, get answer, capture, structure, retrieve">
+              <img src="./assets/usable-mascot.png" alt="Usable mascot">
+              <span class="loop-step loop-step--ask">Ask</span>
+              <span class="loop-step loop-step--answer">Answer</span>
+              <span class="loop-step loop-step--capture">Capture</span>
+              <span class="loop-step loop-step--structure">Structure</span>
+              <span class="loop-step loop-step--retrieve">Retrieve</span>
+            </div>
+          </section>
+        </div>
+      `,
+    },
+    {
+      id: "taks-story",
+      className: "slide--split slide--taks",
       cards: [10],
       html: `
-        <p class="eyebrow">STORY 1 · NATIONAL STRATEGY</p>
+        <div class="split-copy">
+          <p class="eyebrow">STORY 1 · PUBLIC SERVICE</p>
+          <h2>TAKS turned tax guidance<br><span>into a conversation.</span></h2>
+          <p class="large-copy">Not a generic chatbot. A public assistant grounded in official knowledge, source-aware answers, and feedback loops.</p>
+          <p class="source">Live at taks.fo · design by Sansir · built with Usable</p>
+        </div>
+        <div class="taks-stage">
+          <img src="./assets/taks-bot-phone.png" alt="TAKS chatbot answering a customs question on taks.fo">
+        </div>
+      `,
+    },
+    {
+      id: "strategy-story",
+      className: "slide--story",
+      cards: [11],
+      html: `
+        <p class="eyebrow">STORY 2 · NATIONAL STRATEGY</p>
         <h2>The project memory became<br><span>a deliverable.</span></h2>
         <div class="flow-line">
           <span>stakeholder input</span>
@@ -109,10 +158,10 @@ window.TONIK_TALK = {
     {
       id: "game-story",
       className: "slide--split slide--game",
-      cards: [11],
+      cards: [12],
       html: `
         <div class="split-copy">
-          <p class="eyebrow">STORY 2 · GAME DEVELOPMENT</p>
+          <p class="eyebrow">STORY 3 · GAME DEVELOPMENT</p>
           <h2>From one-shot prompting<br>to a specialist workspace.</h2>
           <p class="large-copy">The agent got better when the project stopped living only in the conversation.</p>
         </div>
@@ -124,9 +173,9 @@ window.TONIK_TALK = {
     {
       id: "operator-story",
       className: "slide--operator",
-      cards: [12],
+      cards: [13],
       html: `
-        <p class="eyebrow">STORY 3 · AUTONOMOUS OPERATORS</p>
+        <p class="eyebrow">STORY 4 · AUTONOMOUS OPERATORS</p>
         <h2>Same engine.<br><span>Different harness.</span><br>One memory layer.</h2>
         <div class="operator-grid">
           <img src="./assets/langa-stina.jpg" alt="Langa Stina operator emblem">
@@ -139,7 +188,7 @@ window.TONIK_TALK = {
     {
       id: "decision-traces",
       className: "slide--trace",
-      cards: [13, 14],
+      cards: [14, 15],
       html: `
         <p class="eyebrow">THE FRONTIER</p>
         <h2>Agents should leave<br><span>decision traces.</span></h2>
@@ -157,7 +206,7 @@ window.TONIK_TALK = {
     {
       id: "simulation",
       className: "slide--statement",
-      cards: [15],
+      cards: [16],
       html: `
         <p class="eyebrow">BEYOND RETRIEVAL</p>
         <h2>If your agent can only search,<br><span>it remembers facts.</span></h2>
@@ -167,7 +216,7 @@ window.TONIK_TALK = {
     {
       id: "professions",
       className: "slide--professions",
-      cards: [16, 17],
+      cards: [17],
       html: `
         <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
         <h2>Your knowledge base is where<br><span>local judgement becomes reusable.</span></h2>
@@ -264,73 +313,73 @@ window.TONIK_TALK = {
     {
       minute: "08:00-09:00",
       title: "The Smallest Loop",
-      slide: "Slide 5",
-      text: "The smallest version of the loop is almost boring, which is why it is powerful. Search before work. Act with context. Capture after work. Search before work. Act with context. Capture after work. If you do this for a day, it feels like documentation. If you do it for a month, it starts to feel like onboarding. If you do it for six months, it becomes an organizational memory that changes the quality of every future AI session. The same model now enters the room with a history. That is where different results begin."
+      slide: "Slide 6",
+      text: "This is the whole difference in one picture. Without a memory layer, the loop is almost comic: ask, get answer, forget. The next person asks again. The next agent starts from zero. The organization pays for intelligence, but throws away the learning. With Usable, the loop changes. Ask. Get answer. Capture what happened. Structure it into reusable knowledge. Retrieve it the next time work begins. If you do this for a day, it feels like documentation. If you do it for a month, it feels like onboarding. If you do it for six months, it becomes organizational memory. The same model now enters the room with history."
     },
     {
       minute: "09:00-10:00",
-      title: "Story: The Strategy Project",
-      slide: "Slide 6",
-      text: "Yesterday, Thursday 7 May, at Reinsaríið, the Usable Fragments side-event gave us several concrete versions of this. Jaspur showed it in the national AI strategy work. Julius, our CTO, named another part of the problem in his talk From Fast to Aligned: AI can make teams faster, but speed without shared memory also multiplies drift. In strategy work, there are many voices, sources, and months of context. Normally, much of that disappears into meeting notes, folders, and people's heads. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer future work can ask questions of."
+      title: "Story: The TAKS Bot",
+      slide: "Slide 7",
+      text: "The TAKS bot is the public-service version of this story. Tax is high-trust work. People are not asking abstract questions; they are asking whether they have to pay, what a deadline means, how customs works, what happens if a package crosses a threshold. A generic chatbot is not good enough. The answer has to be grounded in official TAKS knowledge, and the citizen should be reminded to check sources for important decisions. Behind the friendly chat interface is the real point: a structured knowledge workspace, with citizen information, employer information, legal material, news, calendar deadlines, source references, feedback, and analytics. That is why it worked. The bot was not clever because it had a better personality. It was useful because it had better memory."
     },
     {
       minute: "10:00-11:00",
-      title: "Story: The Game Project",
-      slide: "Slide 7",
-      text: "Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
+      title: "Story: The Strategy Project",
+      slide: "Slide 8",
+      text: "Yesterday, Thursday 7 May, at Reinsaríið, the Usable Fragments side-event gave us several concrete versions of this. Jaspur showed it in the national AI strategy work. Julius, our CTO, named another part of the problem in his talk From Fast to Aligned: AI can make teams faster, but speed without shared memory also multiplies drift. In strategy work, there are many voices, sources, and months of context. Normally, much of that disappears into meeting notes, folders, and people's heads. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer future work can ask questions of."
     },
     {
       minute: "11:00-12:00",
-      title: "Story: Two Operators",
-      slide: "Slide 8",
-      text: "Brian's talk at the Usable Fragments side-event took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
+      title: "Story: The Game Project",
+      slide: "Slide 9",
+      text: "Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
     },
     {
       minute: "12:00-13:00",
-      title: "Decision Traces And Context Graphs",
-      slide: "Slide 9",
-      text: "Now for the cutting-edge part. At the Usable Fragments side-event, guest speaker Ajit Jaokar presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
+      title: "Story: Two Operators",
+      slide: "Slide 10",
+      text: "Brian's talk at the Usable Fragments side-event took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
     },
     {
       minute: "13:00-14:00",
-      title: "Accumulated Judgement",
-      slide: "Slide 9",
-      text: "This is where the phrase knowledge management becomes too small, and organizational intelligence becomes more accurate. Your real asset is not only data. It is accumulated judgement. The way your team handles exceptions. The way your profession interprets constraints. The way your customers react when something changes. The way a senior person sees risk before a junior person can name it. If we can externalize even part of that judgement into a memory layer agents can use, we get a very different kind of AI deployment. Not a pilot that impresses people once, but a system that gets better because the organization keeps teaching it."
+      title: "Decision Traces And Context Graphs",
+      slide: "Slide 11",
+      text: "Now for the cutting-edge part. At the Usable Fragments side-event, guest speaker Ajit Jaokar presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
     },
     {
       minute: "14:00-15:00",
-      title: "From Search To Simulation",
-      slide: "Slide 10",
-      text: "A simple test is this: can your system answer what-if questions grounded in your own history? Not just, find me a document. Not just, summarize this meeting. But: what usually happens when we make this kind of change? Which stakeholders tend to care? What broke last time? Which decision pattern are we repeating? That is the shift from retrieval to simulation. We are still early, but this is the direction. The best knowledge bases for agents will not only help them find facts. They will help them reason over precedent."
+      title: "Accumulated Judgement",
+      slide: "Slide 11",
+      text: "This is where the phrase knowledge management becomes too small, and organizational intelligence becomes more accurate. Your real asset is not only data. It is accumulated judgement. The way your team handles exceptions. The way your profession interprets constraints. The way your customers react when something changes. The way a senior person sees risk before a junior person can name it. If we can externalize even part of that judgement into a memory layer agents can use, we get a very different kind of AI deployment. Not a pilot that impresses people once, but a system that gets better because the organization keeps teaching it."
     },
     {
       minute: "15:00-16:00",
-      title: "Every Profession Has A Version",
-      slide: "Slide 11",
-      text: "This is not only a software story. A teacher has examples that worked with a certain age group. A lawyer has clauses and negotiation rationale. A doctor has triage judgement and exception paths. A civil servant has policy intent and institutional constraints. A manager has promises, tradeoffs, and stakeholder history. A researcher has sources, failed hypotheses, and gaps. Every knowledge profession contains local judgement that generic AI cannot guess. The question is whether that judgement stays trapped in people's heads and scattered documents, or whether it becomes available to the agents that will increasingly participate in the work."
+      title: "From Search To Simulation",
+      slide: "Slide 12",
+      text: "A simple test is this: can your system answer what-if questions grounded in your own history? Not just, find me a document. Not just, summarize this meeting. But: what usually happens when we make this kind of change? Which stakeholders tend to care? What broke last time? Which decision pattern are we repeating? That is the shift from retrieval to simulation. We are still early, but this is the direction. The best knowledge bases for agents will not only help them find facts. They will help them reason over precedent."
     },
     {
       minute: "16:00-17:00",
-      title: "Personal Knowledge Bases",
-      slide: "Slide 11",
-      text: "There is a personal version of this. Start by capturing the things you repeat. Your best explanations. Your preferred tone. The checklist you always rebuild. The decision you keep re-arguing with yourself. The examples that make your work recognizably yours. If your AI agent can read those before helping you, you will get less generic work. You will also become more consistent across tools. Today it might be ChatGPT. Tomorrow it might be Claude, Cursor, Hermes, or something else. The tool can change. Your memory should travel with you."
+      title: "Every Profession Has A Version",
+      slide: "Slide 13",
+      text: "This is not only a software story. A teacher has examples that worked with a certain age group. A lawyer has clauses and negotiation rationale. A doctor has triage judgement and exception paths. A civil servant has policy intent and institutional constraints. A manager has promises, tradeoffs, and stakeholder history. A researcher has sources, failed hypotheses, and gaps. Every knowledge profession contains local judgement that generic AI cannot guess. There is also a personal version: your best explanations, your preferred tone, the checklist you always rebuild, the examples that make your work recognizably yours. The tool can change. Your memory should travel with you."
     },
     {
       minute: "17:00-18:00",
       title: "Team Knowledge Bases",
-      slide: "Slide 12",
+      slide: "Slide 14",
       text: "There is also a team version. Capture the top five review comments you keep giving. Capture the standards that are obvious to insiders but invisible to newcomers. Capture the reason behind the architecture, not only the diagram. Capture the postmortem, but also the tradeoff that made the incident possible. Then connect the agent to that before it writes, plans, researches, or sends. This changes where quality control happens. Instead of correcting everything at review time, you move alignment earlier, into plan time. That is faster, but more importantly, it is calmer."
     },
     {
       minute: "18:00-19:00",
       title: "The Monday Playbook",
-      slide: "Slide 12",
+      slide: "Slide 14",
       text: "So what should you do Monday morning? First, pick one repeated workflow. Not the whole organization. One workflow. Second, capture the standards and decisions that shape good work in that workflow. Third, make your AI agent search that memory before it acts. Fourth, ask it to cite the fragments that influenced important choices. Fifth, make the end of the task include a memory update: what changed, what was learned, what should the next person know? That is enough to start. You do not need a grand transformation program to stop throwing away learning."
     },
     {
       minute: "19:00-20:00",
       title: "Close",
-      slide: "Slide 13",
+      slide: "Slide 15",
       text: "I want to leave you with the title again: Same AI, Different Results. In the age of AI, everyone can buy access to intelligence. That means advantage moves somewhere else. It moves to context. It moves to judgement. It moves to the memory layer that makes your agents act like they understand your world. If you are a knowledge professional, your work already contains the material. The question is whether your agents can interact with it. Build that memory layer now. Let it read before it acts. Let it write back after it acts. Same AI. Different knowledge base. Different results. Thank you."
     }
   ]
