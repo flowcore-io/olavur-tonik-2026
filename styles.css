@@ -470,6 +470,15 @@ h2 span {
   background: rgba(248, 250, 252, 0.4);
 }
 
+.slide--trace .source {
+  position: absolute;
+  left: clamp(46px, 6.2vw, 118px);
+  right: clamp(46px, 6.2vw, 118px);
+  bottom: clamp(22px, 2.4vw, 36px);
+  margin-top: 0;
+  font-size: clamp(11px, 1vw, 15px);
+}
+
 .slide--statement .slide__inner {
   align-items: flex-start;
 }

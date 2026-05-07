@@ -45,7 +45,7 @@ window.TONIK_TALK = {
           <div><strong>25%</strong><span>work amplified</span></div>
           <div><strong>50%</strong><span>indirectly affected</span></div>
         </div>
-        <p class="source">Framing inspired by Hans Kári's AI strategy launch slides at Smæran, 7 May 2026.</p>
+        <p class="source">Framing inspired by Hans Kári Vang's AI strategy launch talk at Smæran, Wednesday 6 May 2026.</p>
       `,
     },
     {
@@ -133,7 +133,7 @@ window.TONIK_TALK = {
           <div class="operator-line"></div>
           <img src="./assets/operator-receipt.png" alt="Agent result receipt posted back after work">
         </div>
-        <p class="source">Inspired by Brian Bischoff's Tonik 2026 Usable Fragments talk.</p>
+        <p class="source">Inspired by Brian Bischoff's Usable Fragments talk at Reinsaríið, Thursday 7 May 2026.</p>
       `,
     },
     {
@@ -151,6 +151,7 @@ window.TONIK_TALK = {
           <span>Outcome</span>
         </div>
         <p class="large-copy narrow">The strategic asset is not only data. It is accumulated judgement that machines can reuse.</p>
+        <p class="source">Context Graphs framing from Ajit Jaokar's Usable Fragments guest talk at Reinsaríið, Thursday 7 May 2026.</p>
       `,
     },
     {
@@ -234,7 +235,7 @@ window.TONIK_TALK = {
       minute: "03:00-04:00",
       title: "The Technology Shock",
       slide: "Slide 3",
-      text: "Yesterday, at the AI strategy launch at Smæran, Hans Kári framed AI as a general-purpose technology, like electricity, steam, or the internet. That matters because general-purpose technologies do not land neatly. They do not simply remove a fixed percentage of jobs and call it a day. They change tasks, prices, expectations, and behavior. Some work is automated. Some work becomes more productive. Some work is affected indirectly. And there is uncertainty about timing. The important point for this audience is that we should not only ask, will AI change my profession? It will. The better question is: when the tools multiply, what keeps the work coherent?"
+      text: "On Wednesday, 6 May, at the AI strategy launch at Smæran, Hans Kári Vang framed AI as a general-purpose technology, like electricity, steam, or the internet. That matters because general-purpose technologies do not land neatly. They do not simply remove a fixed percentage of jobs and call it a day. They change tasks, prices, expectations, and behavior. Some work is automated. Some work becomes more productive. Some work is affected indirectly. And there is uncertainty about timing. The important point for this audience is that we should not only ask, will AI change my profession? It will. The better question is: when the tools multiply, what keeps the work coherent?"
     },
     {
       minute: "04:00-05:00",
@@ -270,25 +271,25 @@ window.TONIK_TALK = {
       minute: "09:00-10:00",
       title: "Story: The Strategy Project",
       slide: "Slide 6",
-      text: "Today we heard a good example from Jaspur's work on a national AI strategy. A strategy process has many voices, many sources, and many months of context. Normally, a lot of that context disappears into meeting notes, folders, and the heads of the people who were there. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is also a living memory layer that future work can ask questions of. That matters because Phase B does not have to restart from zero. The AI can work from the actual accumulated knowledge of the project, not from a generic idea of what a strategy should look like."
+      text: "Yesterday, Thursday 7 May, at Reinsaríið, the Usable Fragments side-event gave us several concrete versions of this. Jaspur showed it in the national AI strategy work. Julius, our CTO, named another part of the problem in his talk From Fast to Aligned: AI can make teams faster, but speed without shared memory also multiplies drift. In strategy work, there are many voices, sources, and months of context. Normally, much of that disappears into meeting notes, folders, and people's heads. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer future work can ask questions of."
     },
     {
       minute: "10:00-11:00",
       title: "Story: The Game Project",
       slide: "Slide 7",
-      text: "Johann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
+      text: "Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
     },
     {
       minute: "11:00-12:00",
       title: "Story: Two Operators",
       slide: "Slide 8",
-      text: "Brian's talk took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
+      text: "Brian's talk at the Usable Fragments side-event took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
     },
     {
       minute: "12:00-13:00",
-      title: "Decision Traces",
+      title: "Decision Traces And Context Graphs",
       slide: "Slide 9",
-      text: "Now for the cutting-edge part. The next step is not just storing more content. It is storing decision traces. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. That distinction matters because agents do not only need retrieval. They need precedent. They need to know how judgement has been applied in this organization before."
+      text: "Now for the cutting-edge part. At the Usable Fragments side-event, guest speaker Ajit Jaokar presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
     },
     {
       minute: "13:00-14:00",
