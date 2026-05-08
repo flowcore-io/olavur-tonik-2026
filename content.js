@@ -127,12 +127,13 @@ window.TONIK_TALK = {
       html: `
         <div class="split-copy">
           <p class="eyebrow">STORY 1 · PUBLIC SERVICE</p>
-          <h2>TAKS turned tax guidance<br><span>into a conversation.</span></h2>
-          <p class="large-copy">Not a generic chatbot. A public assistant grounded in official knowledge, source-aware answers, and feedback loops.</p>
-          <p class="source">Live at taks.fo · design by Sansir · built with Usable</p>
+          <h2>TAKS gave AI<br><span>a Faroese name.</span></h2>
+          <p class="large-copy">Meet Eyðei: a public assistant grounded in official TAKS knowledge, source-aware answers, and feedback loops.</p>
+          <p class="source">Eyðei, Tollakur and Skatta Ró · live at taks.fo · built with Usable</p>
         </div>
-        <div class="taks-stage">
-          <img src="./assets/taks-bot-phone.png" alt="TAKS chatbot answering a customs question on taks.fo">
+        <div class="taks-stage taks-stage--video">
+          <video class="taks-video" src="./assets/taks-eydei-demo.mp4" poster="./assets/taks-eydei-poster.png" autoplay muted loop playsinline preload="metadata" aria-label="TAKS video introducing Eyðei, Tollakur and Skatta Ró"></video>
+          <img class="taks-poster" src="./assets/taks-eydei-poster.png" alt="TAKS chatbot Eyðei greeting users on taks.fo">
         </div>
       `,
     },
@@ -346,7 +347,7 @@ window.TONIK_TALK = {
       minute: "09:00-10:00",
       title: "Story: The TAKS Bot",
       slide: "Slide 7",
-      text: "The TAKS bot is the public-service version of this story. Tax is high-trust work. People are not asking abstract questions; they are asking whether they have to pay, what a deadline means, how customs works, what happens if a package crosses a threshold. A generic chatbot is not good enough. The answer has to be grounded in official TAKS knowledge, and the citizen should be reminded to check sources for important decisions. Behind the friendly chat interface is the real point: a structured knowledge workspace, with citizen information, employer information, legal material, news, calendar deadlines, source references, feedback, and analytics. That is why it worked. The bot was not clever because it had a better personality. It was useful because it had better memory."
+      text: "The TAKS bot is the public-service version of this story. And I love one detail: TAKS did not just launch an AI module. They introduced three new digital colleagues: Eyðei, which is how Faroese ears pronounce AI and which also works as a name, Tollakur, and Skatta Ró. That little bit of humour matters, because it makes a serious technology feel approachable. But underneath the friendly names is serious work. Tax is high-trust. People ask about deadlines, customs, deductions, and consequences. A generic chatbot is not enough. Eyðei has to be grounded in official TAKS knowledge, show caution around sources, and leave feedback and analytics behind. That is why this case worked: not because the bot had a cute face, but because the conversation was connected to a structured knowledge workspace."
     },
     {
       minute: "10:00-11:00",

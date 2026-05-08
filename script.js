@@ -42,7 +42,24 @@
     const allSlides = [...document.querySelectorAll(".slide")];
 
     function update() {
-      allSlides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+      allSlides.forEach((slide, i) => {
+        const isActive = i === index;
+        slide.classList.toggle("is-active", isActive);
+        slide.querySelectorAll("video").forEach((video) => {
+          if (isActive) {
+            try {
+              video.currentTime = 0;
+            } catch (_) {}
+            const play = video.play();
+            if (play && typeof play.catch === "function") play.catch(() => {});
+          } else {
+            video.pause();
+            try {
+              video.currentTime = 0;
+            } catch (_) {}
+          }
+        });
+      });
       counter.textContent = `${index + 1} / ${talk.slides.length}`;
       const activeCards = talk.slides[index].cards || [];
       notesBody.innerHTML = activeCards
