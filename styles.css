@@ -115,7 +115,7 @@ h1,
 h2 {
   max-width: none;
   color: var(--soft);
-  font-size: clamp(32px, 3vw, 50px);
+  font-size: clamp(26px, min(3vw, 4.6vh), 50px);
   line-height: 1.04;
   letter-spacing: -0.015em;
   font-weight: 600;
@@ -123,7 +123,7 @@ h2 {
 
 h1 {
   color: var(--text);
-  font-size: clamp(64px, 8.4vw, 144px);
+  font-size: clamp(54px, min(8.4vw, 13vh), 144px);
   line-height: 0.86;
   letter-spacing: -0.025em;
   font-weight: 800;
@@ -142,11 +142,11 @@ h2 span {
 }
 
 h2 span {
-  font-size: clamp(58px, 7vw, 132px);
+  font-size: clamp(40px, min(7vw, 11vh), 132px);
 }
 
 h1 span {
-  font-size: clamp(70px, 9vw, 168px);
+  font-size: clamp(60px, min(9vw, 14vh), 168px);
 }
 
 /* Solo headlines (h2 with no climax span) — treat the whole h2 as climax. */
@@ -155,7 +155,7 @@ h2.solo {
   display: inline-block;
   max-width: 16ch;
   color: var(--orange);
-  font-size: clamp(72px, 8.4vw, 156px);
+  font-size: clamp(56px, min(8vw, 12.5vh), 156px);
   line-height: 0.9;
   letter-spacing: -0.03em;
   font-weight: 900;
@@ -518,14 +518,21 @@ b.negation::after {
 .slide--memory .memory-copy {
   position: relative;
   z-index: 2;
+  max-width: min(70vw, 1100px);
+}
+
+.slide--memory .memory-copy .large-copy {
+  max-width: min(56vw, 880px);
 }
 
 .memory-art {
   position: absolute;
-  right: clamp(66px, 8vw, 150px);
-  top: clamp(250px, 31vh, 330px);
-  width: min(27vw, 370px);
-  opacity: 0.92;
+  right: clamp(46px, 6vw, 130px);
+  bottom: clamp(180px, 24vh, 280px);
+  width: min(22vw, 320px);
+  max-height: 38vh;
+  object-fit: contain;
+  opacity: 0.88;
   z-index: 1;
 }
 
