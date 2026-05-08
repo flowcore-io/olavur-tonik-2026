@@ -35,33 +35,37 @@ window.TONIK_TALK = {
     },
     {
       id: "technology-shock",
-      className: "slide--stats",
+      className: "slide--split slide--stats",
       cards: [4],
       html: `
-        <p class="eyebrow">AI AND WORK</p>
-        <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
-        <div class="stats-row">
-          <div><strong>25%</strong><span>work taken over</span></div>
-          <div><strong>25%</strong><span>work amplified</span></div>
-          <div><strong>50%</strong><span>indirectly affected</span></div>
+        <div class="split-copy">
+          <p class="eyebrow">AI AND WORK</p>
+          <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
+          <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
         </div>
-        <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
+        <div class="chips-stage chips-stage--stats">
+          <div class="float" style="--r:-3deg;--d:0s"><strong>25%</strong><span>work taken over</span></div>
+          <div class="float" style="--r:3deg;--d:-1.6s"><strong>25%</strong><span>work amplified</span></div>
+          <div class="float" style="--r:-2deg;--d:-3.2s"><strong>50%</strong><span>indirectly affected</span></div>
+        </div>
       `,
     },
     {
       id: "state-reasoning",
-      className: "slide--clocks",
+      className: "slide--split slide--clocks",
       cards: [5, 6],
       html: `
-        <p class="eyebrow">THE MISSING LAYER</p>
-        <h2>Most systems store <b class="negation">what is true.</b><br><span>Very few store why it became true.</span></h2>
-        <div class="clock-grid">
-          <section>
+        <div class="split-copy">
+          <p class="eyebrow">THE MISSING LAYER</p>
+          <h2>Most systems store <b class="negation">what is true.</b><br><span>Very few store why it became true.</span></h2>
+        </div>
+        <div class="chips-stage chips-stage--clocks">
+          <section class="float" style="--r:-3deg;--d:0s">
             <h3>State clock</h3>
             <p>Files, dashboards, tickets, contracts, code, meeting notes.</p>
             <small>Data context makes agents accurate.</small>
           </section>
-          <section class="hot">
+          <section class="hot float" style="--r:3deg;--d:-2.2s">
             <h3>Reasoning clock</h3>
             <p>Why we chose it, what constrained us, what failed before, what mattered most.</p>
             <small>Decision context makes agents institutional.</small>
@@ -166,25 +170,27 @@ window.TONIK_TALK = {
     },
     {
       id: "pattern-repeats",
-      className: "slide--pattern",
+      className: "slide--split slide--pattern",
       cards: [12, 13],
       html: `
-        <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
-        <h2 class="solo">The pattern repeats.</h2>
-        <div class="pattern-grid">
-          <article>
+        <div class="split-copy">
+          <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
+          <h2 class="solo">The pattern repeats.</h2>
+        </div>
+        <div class="chips-stage chips-stage--pattern">
+          <article class="float" style="--r:-4deg;--d:0s">
             <h3>Jaspur</h3>
             <p>The project memory became part of the deliverable.</p>
           </article>
-          <article>
+          <article class="float" style="--r:3deg;--d:-1.4s">
             <h3>Johann</h3>
             <p>Games improved when the project stopped living only in the latest prompt.</p>
           </article>
-          <article>
+          <article class="float" style="--r:-2deg;--d:-2.8s">
             <h3>Brian</h3>
             <p>Operators need memory, boundaries, and writeback.</p>
           </article>
-          <article>
+          <article class="float" style="--r:4deg;--d:-4.2s">
             <h3>Ajit</h3>
             <p>Precedent matters: decisions, relationships, and outcomes agents can reuse.</p>
           </article>
@@ -193,50 +199,56 @@ window.TONIK_TALK = {
     },
     {
       id: "decision-traces",
-      className: "slide--trace",
+      className: "slide--split slide--trace",
       cards: [14, 15],
       html: `
-        <p class="eyebrow">THE FRONTIER</p>
-        <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
-        <div class="trace-chain">
-          <span>Observed</span>
-          <span>Constraint</span>
-          <span>Tradeoff</span>
-          <span>Action</span>
-          <span>Outcome</span>
+        <div class="split-copy">
+          <p class="eyebrow">THE FRONTIER</p>
+          <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
+        </div>
+        <div class="chips-stage chips-stage--trace">
+          <span class="float" style="--r:-3deg;--d:0s">Observed</span>
+          <span class="float" style="--r:2deg;--d:-1s">Constraint</span>
+          <span class="float" style="--r:-2deg;--d:-2s">Tradeoff</span>
+          <span class="float" style="--r:3deg;--d:-3s">Action</span>
+          <span class="float" style="--r:-4deg;--d:-4s">Outcome</span>
         </div>
       `,
     },
     {
       id: "professions",
-      className: "slide--professions",
+      className: "slide--split slide--professions",
       cards: [16, 17],
       html: `
-        <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
-        <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
-        <div class="profession-grid">
-          <span>Teacher: what examples worked</span>
-          <span>Lawyer: why that clause moved</span>
-          <span>Engineer: decisions and incidents</span>
-          <span>Manager: promises and tradeoffs</span>
-          <span>Researcher: sources and gaps</span>
-          <span>Founder: bets, signals, and lessons</span>
+        <div class="split-copy">
+          <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
+          <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
+        </div>
+        <div class="chips-stage chips-stage--professions">
+          <span class="float" style="--r:-4deg;--d:0s">Teacher: what examples worked</span>
+          <span class="float" style="--r:3deg;--d:-1s">Lawyer: why that clause moved</span>
+          <span class="float" style="--r:-2deg;--d:-2s">Engineer: decisions and incidents</span>
+          <span class="float" style="--r:4deg;--d:-3s">Manager: promises and tradeoffs</span>
+          <span class="float" style="--r:-3deg;--d:-4s">Researcher: sources and gaps</span>
+          <span class="float" style="--r:2deg;--d:-5s">Founder: bets, signals, and lessons</span>
         </div>
       `,
     },
     {
       id: "playbook",
-      className: "slide--playbook",
+      className: "slide--split slide--playbook",
       cards: [18, 19],
       html: `
-        <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
-        <h2>Start small.<br><span>Make every run compound.</span></h2>
-        <ol class="steps">
-          <li>Pick one repeated workflow.</li>
-          <li>Capture decisions and standards.</li>
-          <li>Connect the agent before it acts.</li>
-          <li>Let it reach the right tools.</li>
-          <li>Write back learning every time.</li>
+        <div class="split-copy">
+          <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
+          <h2>Start small.<br><span>Make every run compound.</span></h2>
+        </div>
+        <ol class="chips-stage chips-stage--steps">
+          <li class="float" style="--r:-3deg;--d:0s">Pick one repeated workflow.</li>
+          <li class="float" style="--r:2deg;--d:-1.2s">Capture decisions and standards.</li>
+          <li class="float" style="--r:-2deg;--d:-2.4s">Connect the agent before it acts.</li>
+          <li class="float" style="--r:3deg;--d:-3.6s">Let it reach the right tools.</li>
+          <li class="float" style="--r:-4deg;--d:-4.8s">Write back learning every time.</li>
         </ol>
       `,
     },

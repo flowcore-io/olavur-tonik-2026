@@ -389,7 +389,10 @@ b.negation::after {
 }
 
 .split-copy {
-  width: min(55vw, 940px);
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  max-width: min(55vw, 980px);
 }
 
 .image-stage {
@@ -411,18 +414,291 @@ b.negation::after {
   filter: drop-shadow(0 28px 70px rgba(0, 0, 0, 0.36));
 }
 
-/* All column slides top-anchor for consistent eyebrow position. */
-.slide--stats .slide__inner,
-.slide--clocks .slide__inner,
+/* ============================================================ */
+/* CHIPS-STAGE — glass-card constellation in the right column.    */
+/* Replaces full-width chip rows so every slide reads as          */
+/* split-copy + visual stage, like slide 2.                       */
+/* ============================================================ */
+
+.chips-stage {
+  position: relative;
+  flex-shrink: 0;
+  width: min(46vw, 720px);
+  aspect-ratio: 1;
+  max-height: 78vh;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips-stage > * {
+  position: absolute;
+  transform: rotate(var(--r, 0deg));
+}
+
+/* Float — gentle 6s vertical bob, phased per card. Hidden by default. */
+@keyframes m-float {
+  0%, 100% { transform: rotate(var(--r, 0deg)) translateY(0); }
+  50% { transform: rotate(var(--r, 0deg)) translateY(-10px); }
+}
+
+@keyframes m-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.chips-stage .float {
+  opacity: 0;
+}
+
+/* ---- 3 stat cards (slide 3) ---- */
+.chips-stage--stats > div {
+  width: 56%;
+  padding: clamp(18px, 1.8vw, 26px) clamp(20px, 1.9vw, 28px);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow:
+    var(--glass-inset),
+    0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.chips-stage--stats > div strong {
+  display: block;
+  color: var(--text);
+  font-size: clamp(56px, 7vw, 116px);
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.chips-stage--stats > div span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: clamp(13px, 1.15vw, 18px);
+  font-weight: 600;
+}
+
+.chips-stage--stats > div:nth-child(1) { top: 4%; left: 6%; }
+.chips-stage--stats > div:nth-child(2) { top: 36%; right: 0; }
+.chips-stage--stats > div:nth-child(3) { bottom: 4%; left: 12%; }
+
+/* ---- 2 clock cards (slide 4) ---- */
+.chips-stage--clocks > section {
+  width: 78%;
+  padding: clamp(22px, 2.2vw, 30px);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow:
+    var(--glass-inset),
+    0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.chips-stage--clocks > section::before {
+  content: "";
+  position: absolute;
+  left: clamp(22px, 2.2vw, 30px);
+  right: clamp(22px, 2.2vw, 30px);
+  top: 0;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 999px;
+  box-shadow: 0 0 14px rgba(147, 197, 253, 0.4);
+}
+
+.chips-stage--clocks > section.hot::before {
+  background: var(--orange);
+  box-shadow: 0 0 16px rgba(252, 175, 42, 0.6);
+}
+
+.chips-stage--clocks h3 {
+  margin-bottom: 12px;
+  font-size: clamp(22px, 1.9vw, 32px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.chips-stage--clocks p {
+  color: var(--muted);
+  font-size: clamp(14px, 1.15vw, 18px);
+  line-height: 1.34;
+  font-weight: 400;
+}
+
+.chips-stage--clocks small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(248, 250, 252, 0.48);
+  font-size: clamp(11px, 0.9vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.chips-stage--clocks > section:nth-child(1) { top: 6%; left: 0; }
+.chips-stage--clocks > section:nth-child(2) { bottom: 6%; right: 0; }
+
+/* ---- 4 pattern cards (slide 9) ---- */
+.chips-stage--pattern > article {
+  width: 50%;
+  padding: clamp(16px, 1.6vw, 22px) clamp(18px, 1.8vw, 24px);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow:
+    var(--glass-inset),
+    0 18px 44px rgba(0, 0, 0, 0.36);
+}
+
+.chips-stage--pattern > article::before {
+  content: "";
+  position: absolute;
+  left: clamp(18px, 1.8vw, 24px);
+  top: 0;
+  width: 28px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 999px;
+}
+
+.chips-stage--pattern > article:nth-child(2n)::before {
+  background: var(--orange);
+  box-shadow: 0 0 12px rgba(252, 175, 42, 0.5);
+}
+
+.chips-stage--pattern h3 {
+  color: var(--text);
+  font-size: clamp(20px, 1.6vw, 28px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.chips-stage--pattern p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: clamp(13px, 1.05vw, 17px);
+  line-height: 1.32;
+  font-weight: 400;
+}
+
+.chips-stage--pattern > article:nth-child(1) { top: 2%; left: 2%; }
+.chips-stage--pattern > article:nth-child(2) { top: 6%; right: 0; }
+.chips-stage--pattern > article:nth-child(3) { bottom: 6%; left: 0; }
+.chips-stage--pattern > article:nth-child(4) { bottom: 2%; right: 2%; }
+
+/* ---- 5 trace boxes (slide 10) ---- */
+.chips-stage--trace > span {
+  display: grid;
+  place-items: center;
+  width: 56%;
+  min-height: clamp(56px, 5.5vw, 88px);
+  padding: 14px 18px;
+  color: var(--text);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--glass-inset);
+  font-size: clamp(15px, 1.25vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+.chips-stage--trace > span:last-child {
+  color: var(--orange);
+  border-color: rgba(252, 175, 42, 0.46);
+  box-shadow:
+    var(--glass-inset),
+    0 0 36px rgba(252, 175, 42, 0.22);
+}
+
+.chips-stage--trace > span:nth-child(1) { top: 0; left: 4%; }
+.chips-stage--trace > span:nth-child(2) { top: 22%; right: 0; }
+.chips-stage--trace > span:nth-child(3) { top: 44%; left: 12%; }
+.chips-stage--trace > span:nth-child(4) { top: 66%; right: 4%; }
+.chips-stage--trace > span:nth-child(5) { bottom: 0; left: 8%; }
+
+/* ---- 6 profession chips (slide 11) ---- */
+.chips-stage--professions > span {
+  width: 44%;
+  padding: 14px 18px;
+  color: var(--text);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--glass-inset);
+  font-size: clamp(12px, 1.05vw, 17px);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.chips-stage--professions > span:nth-child(1) { top: 2%; left: 2%; }
+.chips-stage--professions > span:nth-child(2) { top: 6%; right: 2%; }
+.chips-stage--professions > span:nth-child(3) { top: 38%; left: 0; }
+.chips-stage--professions > span:nth-child(4) { top: 42%; right: 0; }
+.chips-stage--professions > span:nth-child(5) { bottom: 4%; left: 4%; }
+.chips-stage--professions > span:nth-child(6) { bottom: 0; right: 4%; }
+
+/* ---- 5 numbered steps (slide 12) ---- */
+.chips-stage--steps {
+  counter-reset: chip-steps;
+}
+
+.chips-stage--steps > li {
+  width: 60%;
+  padding: clamp(16px, 1.6vw, 22px) clamp(18px, 1.8vw, 24px);
+  color: var(--text);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow:
+    var(--glass-inset),
+    0 18px 44px rgba(0, 0, 0, 0.36);
+  font-size: clamp(14px, 1.15vw, 20px);
+  line-height: 1.24;
+  font-weight: 600;
+  counter-increment: chip-steps;
+}
+
+.chips-stage--steps > li::before {
+  content: counter(chip-steps, decimal-leading-zero);
+  display: block;
+  margin-bottom: 8px;
+  color: var(--orange);
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.chips-stage--steps > li:nth-child(1) { top: 1%; left: 0; }
+.chips-stage--steps > li:nth-child(2) { top: 16%; right: 0; }
+.chips-stage--steps > li:nth-child(3) { top: 40%; left: 12%; }
+.chips-stage--steps > li:nth-child(4) { top: 64%; right: 6%; }
+.chips-stage--steps > li:nth-child(5) { bottom: 1%; left: 4%; }
+
+/* Pure-column slides top-anchor for consistent eyebrow position.   */
+/* (slide--split slides override to row via .slide--split below.)   */
 .slide--memory .slide__inner,
 .slide--devmode .slide__inner,
 .slide--story .slide__inner,
-.slide--pattern .slide__inner,
 .slide--operator .slide__inner,
-.slide--trace .slide__inner,
-.slide--statement .slide__inner,
-.slide--professions .slide__inner,
-.slide--playbook .slide__inner {
+.slide--statement .slide__inner {
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -1598,6 +1874,29 @@ body[data-mode="cards"] {
 
   .slide.is-active b.negation::after {
     animation: m-strike-rip 320ms var(--ease-expo) 460ms both;
+  }
+
+  /* ============================================================ */
+  /* CHIP-STAGE CONSTELLATION — fade in cascade + perpetual float   */
+  /* ============================================================ */
+
+  .slide.is-active .chips-stage .float {
+    animation:
+      m-fade-in 460ms var(--ease-expo) 0s 1 forwards,
+      m-float 6.4s ease-in-out var(--d, 0s) infinite;
+  }
+
+  .slide.is-active .chips-stage .float:nth-child(1) { animation-delay: 720ms, var(--d, 0s); }
+  .slide.is-active .chips-stage .float:nth-child(2) { animation-delay: 820ms, var(--d, 0s); }
+  .slide.is-active .chips-stage .float:nth-child(3) { animation-delay: 920ms, var(--d, 0s); }
+  .slide.is-active .chips-stage .float:nth-child(4) { animation-delay: 1020ms, var(--d, 0s); }
+  .slide.is-active .chips-stage .float:nth-child(5) { animation-delay: 1120ms, var(--d, 0s); }
+  .slide.is-active .chips-stage .float:nth-child(6) { animation-delay: 1220ms, var(--d, 0s); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chips-stage .float {
+    opacity: 1;
   }
 }
 
