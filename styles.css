@@ -421,7 +421,7 @@ h2 span {
 
 .loop-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 3.2vw, 56px);
   width: 100%;
   margin-top: clamp(22px, 3vw, 42px);
@@ -429,7 +429,7 @@ h2 span {
 
 .loop-panel {
   position: relative;
-  min-height: clamp(250px, 26vw, 350px);
+  min-height: clamp(250px, 25vw, 330px);
   border-top: 4px solid rgba(248, 250, 252, 0.16);
 }
 
@@ -445,8 +445,21 @@ h2 span {
 }
 
 .loop-cycle {
-  position: absolute;
-  inset: clamp(46px, 4vw, 64px) 0 0;
+  position: relative;
+  height: clamp(220px, 20vw, 290px);
+  margin-top: clamp(16px, 2vw, 28px);
+}
+
+.loop-cycle--simple {
+  width: min(100%, 500px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loop-cycle--usable {
+  width: min(100%, 660px);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .loop-node,
@@ -466,6 +479,10 @@ h2 span {
   text-transform: uppercase;
 }
 
+.loop-node strong {
+  min-height: 1.2em;
+}
+
 .loop-node span:not(.fishbowl) {
   display: grid;
   place-items: center;
@@ -483,46 +500,50 @@ h2 span {
 }
 
 .loop-node--ask {
-  left: 46%;
+  left: 50%;
   top: 0;
   transform: translateX(-50%);
 }
 
 .loop-node--answer {
-  right: 4%;
-  bottom: 6%;
+  right: 8%;
+  top: 57%;
+  transform: translateY(-50%);
 }
 
 .loop-node--forget {
-  left: 4%;
-  bottom: 4%;
+  left: 8%;
+  top: 57%;
+  transform: translateY(-50%);
 }
 
 .loop-cycle--simple::before,
 .loop-cycle--simple::after,
-.loop-cycle--usable::before {
+.loop-cycle--usable::before,
+.loop-cycle--usable::after {
   content: "";
   position: absolute;
-  border: 4px solid rgba(248, 250, 252, 0.58);
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 50%;
 }
 
 .loop-cycle--simple::before {
-  right: 20%;
-  top: 24%;
-  width: 96px;
-  height: 96px;
-  transform: rotate(38deg);
+  left: 50%;
+  top: 54%;
+  width: clamp(170px, 15vw, 230px);
+  height: clamp(170px, 15vw, 230px);
+  border: 4px solid rgba(248, 250, 252, 0.46);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-cycle--simple::after {
-  left: 22%;
-  bottom: 20%;
-  width: 104px;
-  height: 104px;
-  transform: rotate(202deg);
+  left: calc(50% + clamp(60px, 5.5vw, 86px));
+  top: calc(54% - clamp(82px, 7vw, 108px));
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid rgba(248, 250, 252, 0.58);
+  transform: rotate(46deg);
 }
 
 .fishbowl {
@@ -566,25 +587,32 @@ h2 span {
   border-right: 10px solid var(--orange);
 }
 
-.loop-cycle--usable {
-  inset: clamp(42px, 4vw, 62px) 0 0;
-}
-
 .loop-cycle--usable::before {
   left: 50%;
-  top: 50%;
-  width: min(23vw, 320px);
-  height: min(23vw, 320px);
-  border-color: rgba(252, 175, 42, 0.72);
-  border-left-color: transparent;
-  transform: translate(-50%, -50%) rotate(34deg);
+  top: 52%;
+  width: clamp(210px, 18vw, 300px);
+  height: clamp(210px, 18vw, 300px);
+  border: 4px solid rgba(252, 175, 42, 0.72);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loop-cycle--usable::after {
+  left: calc(50% + clamp(76px, 6.8vw, 112px));
+  top: calc(52% - clamp(102px, 8.2vw, 136px));
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 18px solid rgba(252, 175, 42, 0.86);
+  transform: rotate(42deg);
 }
 
 .loop-cycle--usable img {
   position: absolute;
   left: 50%;
-  top: 50%;
-  width: min(10vw, 150px);
+  top: 52%;
+  width: clamp(92px, 8vw, 128px);
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 16px 38px rgba(252, 175, 42, 0.2));
 }
@@ -612,23 +640,25 @@ h2 span {
 }
 
 .loop-step--answer {
-  right: 2%;
-  top: 34%;
+  right: 15%;
+  top: 39%;
+  transform: translateY(-50%);
 }
 
 .loop-step--capture {
-  right: 18%;
-  bottom: 0;
+  right: 22%;
+  bottom: 8%;
 }
 
 .loop-step--structure {
-  left: 18%;
-  bottom: 0;
+  left: 22%;
+  bottom: 8%;
 }
 
 .loop-step--retrieve {
-  left: 2%;
-  top: 34%;
+  left: 15%;
+  top: 39%;
+  transform: translateY(-50%);
 }
 
 .taks-stage {

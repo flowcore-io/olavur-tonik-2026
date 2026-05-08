@@ -160,7 +160,7 @@ window.TONIK_TALK = {
           <strong>→</strong>
           <span>plan-time alignment</span>
         </div>
-        <p class="source">From Julius's "From Fast to Aligned" Usable Fragments talk at Reinsaríið, Thursday 7 May 2026.</p>
+        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Julius's "From Fast to Aligned".</p>
       `,
     },
     {
@@ -209,7 +209,7 @@ window.TONIK_TALK = {
           <div class="operator-line"></div>
           <img src="./assets/operator-receipt.png" alt="Agent result receipt posted back after work">
         </div>
-        <p class="source">Inspired by Brian Bischoff's Usable Fragments talk at Reinsaríið, Thursday 7 May 2026.</p>
+        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Brian Bischoff's operator talk.</p>
       `,
     },
     {
@@ -227,7 +227,7 @@ window.TONIK_TALK = {
           <span>Outcome</span>
         </div>
         <p class="large-copy narrow">The strategic asset is not only data. It is accumulated judgement that machines can reuse.</p>
-        <p class="source">Context Graphs framing from Ajit Jaokar's Usable Fragments guest talk at Reinsaríið, Thursday 7 May 2026.</p>
+        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Ajit Jaokar's Context Graphs guest talk.</p>
       `,
     },
     {
@@ -353,31 +353,31 @@ window.TONIK_TALK = {
       minute: "10:00-11:00",
       title: "Story: From Fast To Aligned",
       slide: "Slide 8",
-      text: "Julius's talk, From Fast to Aligned, was the software-development version of the same idea. The important point was not simply that AI makes developers faster. Everybody can feel that already. His point was that speed creates a new process problem: three good developers can ask the same AI for the same feature and get three reasonable but different implementations. None of them are obviously wrong, but they do not fit together. Then code review becomes the place where the team pays the alignment tax. Julius showed a different workflow: start from a PRD in Usable, split it into aligned task fragments, enhance the plan with standards and prior solutions before code is written, implement and test, then write the learning back after the commit. That moves alignment from review time to plan time. It turns AI coding from isolated acceleration into a team process that compounds."
+      text: "Before the next examples, the context matters. On Thursday, 7 May, at Reinsaríið, the Usable Fragments event had talks by Julius, Jaspur, Jóhann and Brian, plus guest speaker Ajit Jaokar. Julius's From Fast to Aligned was the software-development version of the same idea. His point was not simply that AI makes developers faster. His point was that speed creates a new process problem: three good developers can ask the same AI for the same feature and get three reasonable but different implementations. None are obviously wrong, but they do not fit together. Then code review becomes where the team pays the alignment tax. Julius showed a different workflow: start from a PRD in Usable, split it into aligned task fragments, enhance the plan with standards and prior solutions before code is written, implement and test, then write the learning back after the commit. That moves alignment from review time to plan time."
     },
     {
       minute: "11:00-12:00",
       title: "Story: The Strategy Project",
       slide: "Slide 9",
-      text: "Jaspur gave the national-strategy version of this story at the Usable Fragments side-event yesterday, Thursday 7 May, at Reinsaríið. A national AI strategy has many voices, sources, constraints, and months of context. Normally, a lot of that disappears into meeting notes, folders, and the heads of the people who were there. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer that future phases can ask questions of. That matters because the next phase does not restart from zero. It can work from accumulated project knowledge, not a generic idea of what a strategy should look like. The output is still a strategy, but the deeper asset is the trace of how the strategy was made."
+      text: "At that same Usable Fragments event, Jaspur gave the national-strategy version of this story. A national AI strategy has many voices, sources, constraints, and months of context. Normally, a lot of that disappears into meeting notes, folders, and the heads of the people who were there. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer that future phases can ask questions of. That matters because the next phase does not restart from zero. It can work from accumulated project knowledge, not a generic idea of what a strategy should look like. The output is still a strategy, but the deeper asset is the trace of how the strategy was made."
     },
     {
       minute: "12:00-13:00",
       title: "Story: The Game Project",
       slide: "Slide 10",
-      text: "Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
+      text: "At the same event, Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
     },
     {
       minute: "13:00-14:00",
       title: "Story: Two Operators",
       slide: "Slide 11",
-      text: "Brian's talk at the Usable Fragments side-event took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
+      text: "At the same event, Brian's talk took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
     },
     {
       minute: "14:00-15:00",
       title: "Decision Traces And Context Graphs",
       slide: "Slide 12",
-      text: "Now for the cutting-edge part. At the Usable Fragments side-event, guest speaker Ajit Jaokar presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
+      text: "Now for the cutting-edge part. Ajit Jaokar's guest talk at the same Usable Fragments event presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
     },
     {
       minute: "15:00-16:00",
