@@ -206,13 +206,7 @@ window.TONIK_TALK = {
         </div>
         <div class="chips-stage">
           <svg class="trace-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="trace-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.55"/>
-                <stop offset="100%" stop-color="#fcaf2a" stop-opacity="0.95"/>
-              </linearGradient>
-            </defs>
-            <path d="M 25 17 L 75 17 L 25 50 L 75 50 L 50 87" />
+            <path d="M 0 17 L 100 17 Q 100 33 0 33 Q 0 50 100 50 Q 100 70 0 70 Q 25 80 50 87" />
           </svg>
           <article class="float" style="--r:-2deg;--d:0s"><h3>Observed</h3><p>What happened in the workflow.</p></article>
           <article class="float" style="--r:2deg;--d:-1.2s"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
@@ -251,6 +245,9 @@ window.TONIK_TALK = {
           <h2>Start small.<br><span>Make every run compound.</span></h2>
         </div>
         <div class="chips-stage">
+          <svg class="trace-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 0 17 L 100 17 Q 100 33 0 33 Q 0 50 100 50 Q 100 70 0 70 Q 25 80 50 87" />
+          </svg>
           <article class="float" style="--r:-2deg;--d:0s"><h3>01</h3><p>Pick one repeated workflow.</p></article>
           <article class="float" style="--r:2deg;--d:-1.2s"><h3>02</h3><p>Capture decisions and standards.</p></article>
           <article class="float" style="--r:-2deg;--d:-2.4s"><h3>03</h3><p>Connect the agent before it acts.</p></article>

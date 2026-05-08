@@ -534,7 +534,8 @@ b.negation::after {
 }
 
 /* Trace slide: SVG path winding through the 5 cards.              */
-.slide--trace .chips-stage {
+.slide--trace .chips-stage,
+.slide--playbook .chips-stage {
   position: relative;
 }
 
@@ -545,21 +546,24 @@ b.negation::after {
   height: 100%;
   pointer-events: none;
   overflow: visible;
-  z-index: 3;
+  z-index: 0;
 }
 
 .trace-path path {
   fill: none;
-  stroke: url(#trace-grad);
-  stroke-width: 4;
+  stroke: var(--orange);
+  stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 0 12px rgba(252, 175, 42, 0.7));
-  opacity: 1;
+  filter:
+    drop-shadow(0 0 14px rgba(252, 175, 42, 0.7))
+    drop-shadow(0 0 28px rgba(252, 175, 42, 0.4));
+  opacity: 0.95;
 }
 
-.slide--trace .chips-stage > article {
+.slide--trace .chips-stage > article,
+.slide--playbook .chips-stage > article {
   position: relative;
   z-index: 1;
 }
