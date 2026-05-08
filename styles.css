@@ -533,6 +533,37 @@ b.negation::after {
   font-size: clamp(22px, 1.9vw, 32px);
 }
 
+/* Trace slide: SVG path winding through the 5 cards.              */
+.slide--trace .chips-stage {
+  position: relative;
+}
+
+.trace-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 3;
+}
+
+.trace-path path {
+  fill: none;
+  stroke: url(#trace-grad);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 12px rgba(252, 175, 42, 0.7));
+  opacity: 1;
+}
+
+.slide--trace .chips-stage > article {
+  position: relative;
+  z-index: 1;
+}
+
 /* Pure-column slides top-anchor for consistent eyebrow position.   */
 /* (slide--split slides override to row via .slide--split below.)   */
 .slide--memory .slide__inner,
@@ -1733,6 +1764,23 @@ body[data-mode="cards"] {
   .slide.is-active .chips-stage .float:nth-child(4) { animation-delay: 1020ms, var(--d, 0s); }
   .slide.is-active .chips-stage .float:nth-child(5) { animation-delay: 1120ms, var(--d, 0s); }
   .slide.is-active .chips-stage .float:nth-child(6) { animation-delay: 1220ms, var(--d, 0s); }
+
+  /* ============================================================ */
+  /* TRACE PATH — SVG line winds through the 5 cards on slide 10   */
+  /* ============================================================ */
+
+  @keyframes m-trace-draw {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .slide--trace .trace-path path {
+    stroke-dasharray: 1000;
+  }
+
+  .slide--trace.is-active .trace-path path {
+    animation: m-trace-draw 2200ms cubic-bezier(0.65, 0, 0.35, 1) 800ms both;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
