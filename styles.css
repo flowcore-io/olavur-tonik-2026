@@ -83,8 +83,11 @@ body {
   inset: 0;
   z-index: 2;
   display: flex;
-  gap: clamp(28px, 4vw, 72px);
-  padding: clamp(44px, 5.8vw, 104px) clamp(46px, 6.2vw, 118px);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(20px, 2.6vw, 44px);
+  padding: clamp(48px, 5.4vw, 96px) clamp(46px, 6.2vw, 118px) clamp(56px, 5.4vw, 96px);
 }
 
 .slide-footer {
@@ -202,7 +205,10 @@ b.negation::after {
 
 .eyebrow {
   display: inline-flex;
+  align-self: flex-start;
   align-items: center;
+  width: auto;
+  max-width: max-content;
   margin-bottom: clamp(20px, 2.6vw, 36px);
   padding: 8px 14px 8px 14px;
   color: var(--blue);
@@ -359,8 +365,10 @@ b.negation::after {
 }
 
 .slide--cover .slide__inner {
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(40px, 6vw, 96px);
 }
 
 .cover-copy {
@@ -374,8 +382,10 @@ b.negation::after {
 }
 
 .slide--split .slide__inner {
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(40px, 6vw, 96px);
 }
 
 .split-copy {
@@ -401,6 +411,7 @@ b.negation::after {
   filter: drop-shadow(0 28px 70px rgba(0, 0, 0, 0.36));
 }
 
+/* All column slides top-anchor for consistent eyebrow position. */
 .slide--stats .slide__inner,
 .slide--clocks .slide__inner,
 .slide--memory .slide__inner,
@@ -411,10 +422,17 @@ b.negation::after {
 .slide--trace .slide__inner,
 .slide--statement .slide__inner,
 .slide--professions .slide__inner,
-.slide--playbook .slide__inner,
-.slide--closing .slide__inner {
+.slide--playbook .slide__inner {
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+/* Closing keeps a horizontal row with the mascot. */
+.slide--closing .slide__inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(40px, 6vw, 96px);
 }
 
 .stats-row {
@@ -564,21 +582,11 @@ b.negation::after {
 }
 
 .slide--loop .slide__inner {
-  flex-direction: column;
-  justify-content: flex-start;
   gap: 0;
-  padding-top: clamp(34px, 4vw, 60px);
-  padding-bottom: clamp(30px, 3vw, 48px);
 }
 
 .slide--loop .eyebrow {
-  margin-bottom: clamp(10px, 1.4vw, 18px);
-}
-
-.slide--loop h2 {
-  max-width: 18ch;
-  font-size: clamp(46px, 5vw, 88px);
-  line-height: 0.92;
+  margin-bottom: clamp(14px, 1.6vw, 22px);
 }
 
 .loop-grid {
@@ -902,19 +910,8 @@ b.negation::after {
   background: linear-gradient(90deg, var(--blue), var(--orange));
 }
 
-.slide--devmode h2 {
-  max-width: 20ch;
-  font-size: clamp(48px, 5.2vw, 96px);
-  line-height: 0.92;
-}
-
-.slide--devmode .slide__inner {
-  justify-content: flex-start;
-  padding-top: clamp(38px, 4.7vw, 74px);
-}
-
 .slide--devmode .eyebrow {
-  margin-bottom: clamp(10px, 1.5vw, 22px);
+  margin-bottom: clamp(14px, 1.6vw, 22px);
 }
 
 .devmode-flow {
@@ -995,14 +992,8 @@ b.negation::after {
   font-size: clamp(11px, 0.95vw, 15px);
 }
 
-.slide--pattern .slide__inner {
-  justify-content: flex-start;
-  padding-top: clamp(34px, 4.4vw, 72px);
-}
-
 .slide--pattern h2 {
   max-width: none;
-  font-size: clamp(40px, 4vw, 68px);
 }
 
 .pattern-grid {
@@ -1015,8 +1006,7 @@ b.negation::after {
 
 .pattern-grid article {
   position: relative;
-  min-height: 168px;
-  padding: clamp(22px, 2.2vw, 32px) clamp(22px, 2.2vw, 30px);
+  padding: clamp(18px, 2vw, 28px) clamp(20px, 2vw, 28px);
   background: var(--glass-fill);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
@@ -1142,10 +1132,6 @@ b.negation::after {
   font-size: clamp(11px, 1vw, 15px);
 }
 
-.slide--statement .slide__inner {
-  align-items: flex-start;
-}
-
 .slide--statement h2 {
   max-width: 16ch;
 }
@@ -1204,12 +1190,6 @@ b.negation::after {
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 0.9;
-}
-
-.slide--closing .slide__inner {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .slide--closing img {
@@ -1278,16 +1258,15 @@ body[data-mode="cards"] {
     100% { opacity: 1; transform: translate3d(0, 0, 0); }
   }
 
-  /* Slam — front-loaded scale 1.6 → 1, 22 frames, opacity 1 by f2. */
-  @keyframes m-slam {
-    0% { opacity: 0; transform: scale(1.6); }
-    9% { opacity: 1; }
-    100% { opacity: 1; transform: scale(1); }
+  /* SlideIn from left — gray setup glides in from the left.        */
+  @keyframes m-slide-in {
+    0% { opacity: 0; transform: translate3d(-160px, 0, 0); }
+    100% { opacity: 1; transform: translate3d(0, 0, 0); }
   }
 
-  /* SlideIn — horizontal 200px ease-out-expo. Sets up the climax.  */
-  @keyframes m-slide-in {
-    0% { opacity: 0; transform: translate3d(-200px, 0, 0); }
+  /* SlideIn from right — orange climax glides in from the right.   */
+  @keyframes m-slide-in-right {
+    0% { opacity: 0; transform: translate3d(160px, 0, 0); }
     100% { opacity: 1; transform: translate3d(0, 0, 0); }
   }
 
@@ -1381,13 +1360,9 @@ body[data-mode="cards"] {
     pointer-events: none;
   }
 
-  /* White flash — rides above content for the snap.                 */
+  /* White flash overlay — disabled (kept for future).               */
   .slide.is-active::before {
-    z-index: 30;
-    background: rgba(255, 255, 255, 0.9);
-    mix-blend-mode: overlay;
-    opacity: 0;
-    animation: m-white-flash 233ms ease-out 520ms both;
+    display: none;
   }
 
   /* Warm vignette ignition — sits behind content, tints the floor.  */
@@ -1395,7 +1370,7 @@ body[data-mode="cards"] {
     z-index: 1;
     background: radial-gradient(72% 56% at 50% 110%, rgba(252, 175, 42, 0.22), transparent 62%);
     opacity: 0;
-    animation: m-warm-ignite 600ms var(--ease-expo) 540ms both;
+    animation: m-warm-ignite 600ms var(--ease-expo) 720ms both;
   }
 
   /* Cover slide gets warm CORNER vignettes instead of bottom.       */
@@ -1416,40 +1391,41 @@ body[data-mode="cards"] {
 
   /* Eyebrow appears first.                                          */
   .slide.is-active .eyebrow {
-    animation: m-reveal 167ms var(--ease-expo) 80ms both;
+    animation: m-reveal 220ms var(--ease-expo) 80ms both;
   }
 
   /* Setup type (h1 / h2 text nodes) slides in from the left.        */
   .slide.is-active h1,
   .slide.is-active h2 {
-    animation: m-slide-in 460ms var(--ease-expo) 200ms both;
+    animation: m-slide-in 540ms var(--ease-expo) 220ms both;
   }
 
-  /* Climax span SLAMS in — front-loaded scale, opacity 1 by f2.     */
+  /* Climax span slides in from the right — opposite of the setup.   */
   .slide.is-active h1 span,
-  .slide.is-active h2 span {
-    transform-origin: left center;
-    animation: m-slam 367ms var(--ease-expo) 540ms both;
+  .slide.is-active h2 span,
+  .slide.is-active h2.solo {
+    animation: m-slide-in-right 600ms var(--ease-expo) 540ms both;
   }
 
-  /* Underline rip — drawn after the slam settles.                   */
+  /* Underline rip — drawn after the climax has settled.             */
   .slide.is-active h1 span::after,
-  .slide.is-active h2 span::after {
-    animation: m-underline-rip 367ms var(--ease-expo) 800ms both;
+  .slide.is-active h2 span::after,
+  .slide.is-active h2.solo::after {
+    animation: m-underline-rip 460ms var(--ease-expo) 1000ms both;
   }
 
-  /* Supporting copy reveals, then dims once the climax fires.       */
+  /* Supporting copy reveals, then dims after the climax has landed. */
   .slide.is-active .subtitle,
   .slide.is-active .large-copy,
   .slide.is-active .statement {
     animation:
-      m-reveal 167ms var(--ease-expo) 320ms both,
-      m-dim 220ms ease-out 900ms forwards;
+      m-reveal 220ms var(--ease-expo) 340ms both,
+      m-dim 280ms ease-out 1180ms forwards;
   }
 
   .slide.is-active .meta,
   .slide.is-active .source {
-    animation: m-reveal 167ms var(--ease-expo) 380ms both;
+    animation: m-reveal 220ms var(--ease-expo) 420ms both;
   }
 
   /* Cover art / image stages pop in alongside the slam.             */
@@ -1486,7 +1462,7 @@ body[data-mode="cards"] {
   .slide.is-active .profession-grid span:nth-child(1),
   .slide.is-active .steps li:nth-child(1),
   .slide.is-active .trace-chain span:nth-child(1) {
-    animation-delay: 360ms;
+    animation-delay: 720ms;
   }
 
   .slide.is-active .stats-row div:nth-child(2),
@@ -1496,7 +1472,7 @@ body[data-mode="cards"] {
   .slide.is-active .profession-grid span:nth-child(2),
   .slide.is-active .steps li:nth-child(2),
   .slide.is-active .trace-chain span:nth-child(2) {
-    animation-delay: 430ms;
+    animation-delay: 800ms;
   }
 
   .slide.is-active .stats-row div:nth-child(3),
@@ -1505,7 +1481,7 @@ body[data-mode="cards"] {
   .slide.is-active .profession-grid span:nth-child(3),
   .slide.is-active .steps li:nth-child(3),
   .slide.is-active .trace-chain span:nth-child(3) {
-    animation-delay: 500ms;
+    animation-delay: 880ms;
   }
 
   .slide.is-active .stats-row div:nth-child(4),
@@ -1514,24 +1490,22 @@ body[data-mode="cards"] {
   .slide.is-active .profession-grid span:nth-child(4),
   .slide.is-active .steps li:nth-child(4),
   .slide.is-active .trace-chain span:nth-child(4) {
-    animation-delay: 570ms;
+    animation-delay: 960ms;
   }
 
   .slide.is-active .profession-grid span:nth-child(5),
   .slide.is-active .steps li:nth-child(5),
   .slide.is-active .trace-chain span:nth-child(5) {
-    animation-delay: 640ms;
+    animation-delay: 1040ms;
   }
 
   .slide.is-active .profession-grid span:nth-child(6) {
-    animation-delay: 710ms;
+    animation-delay: 1120ms;
   }
 
-  /* Trace-chain final card — orange — gets a slam on top of reveal. */
+  /* Trace-chain final card — orange — gets a softer reveal accent.  */
   .slide.is-active .trace-chain span:last-child {
-    animation:
-      m-reveal 280ms var(--ease-expo) 640ms both,
-      m-slam 367ms var(--ease-expo) 920ms both;
+    animation: m-reveal 320ms var(--ease-expo) 720ms both;
   }
 
   /* Connector lines — draw rip from the left.                       */
@@ -1559,17 +1533,13 @@ body[data-mode="cards"] {
   .slide.is-active .devmode-flow span:nth-child(7) { animation-delay: 720ms; }
   .slide.is-active .devmode-flow b:nth-child(8) { animation-delay: 780ms; }
   .slide.is-active .devmode-flow span:nth-child(9) {
-    animation:
-      m-reveal 280ms var(--ease-expo) 840ms both,
-      m-slam 367ms var(--ease-expo) 1100ms both;
+    animation: m-reveal 320ms var(--ease-expo) 900ms both;
   }
 
   .slide.is-active .devmode-contrast span:first-child { animation-delay: 740ms; }
   .slide.is-active .devmode-contrast strong { animation-delay: 800ms; }
   .slide.is-active .devmode-contrast span:last-child {
-    animation:
-      m-reveal 280ms var(--ease-expo) 860ms both,
-      m-slam 367ms var(--ease-expo) 1100ms both;
+    animation: m-reveal 320ms var(--ease-expo) 920ms both;
   }
 
   /* Loop diagram timing.                                            */
@@ -1621,21 +1591,13 @@ body[data-mode="cards"] {
   /* Treat the whole h2 as the climax: SLAM, not slide-in.         */
   /* ============================================================ */
 
-  .slide.is-active h2.solo {
-    animation: m-slam 367ms var(--ease-expo) 360ms both;
-  }
-
-  .slide.is-active h2.solo::after {
-    animation: m-underline-rip 367ms var(--ease-expo) 700ms both;
-  }
-
   /* ============================================================ */
   /* STRIKETHROUGH RIPS — fired on negation phrases                 */
-  /* (Strike rips while setup is still sliding in, before slam.)   */
+  /* (Strike rips while setup is still sliding in, before climax.) */
   /* ============================================================ */
 
   .slide.is-active b.negation::after {
-    animation: m-strike-rip 280ms var(--ease-expo) 380ms both;
+    animation: m-strike-rip 320ms var(--ease-expo) 460ms both;
   }
 }
 
