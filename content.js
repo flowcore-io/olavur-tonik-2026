@@ -204,15 +204,15 @@ window.TONIK_TALK = {
           <p class="eyebrow">THE FRONTIER</p>
           <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
         </div>
-        <div class="chips-stage">
-          <svg class="trace-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 0 17 L 100 17 Q 100 33 0 33 Q 0 50 100 50 Q 100 70 0 70 Q 25 80 50 87" />
+        <div class="trace-stack">
+          <svg class="trace-vline" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 5 4 L 5 96" />
           </svg>
-          <article class="float" style="--r:-2deg;--d:0s"><h3>Observed</h3><p>What happened in the workflow.</p></article>
-          <article class="float" style="--r:2deg;--d:-1.2s"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
-          <article class="float" style="--r:-2deg;--d:-2.4s"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
-          <article class="float" style="--r:2deg;--d:-3.6s"><h3>Action</h3><p>What the agent or team did.</p></article>
-          <article class="hot float" style="--r:-2deg;--d:-4.8s"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
+          <article class="trace-card" style="--ix:-220px;--iy:-40px;--ir:-14deg"><h3>Observed</h3><p>What happened in the workflow.</p></article>
+          <article class="trace-card" style="--ix:180px;--iy:-30px;--ir:18deg"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
+          <article class="trace-card" style="--ix:-200px;--iy:60px;--ir:12deg"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
+          <article class="trace-card" style="--ix:240px;--iy:-10px;--ir:-16deg"><h3>Action</h3><p>What the agent or team did.</p></article>
+          <article class="trace-card hot" style="--ix:-160px;--iy:80px;--ir:10deg"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
         </div>
       `,
     },

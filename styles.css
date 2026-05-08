@@ -533,6 +533,113 @@ b.negation::after {
   font-size: clamp(22px, 1.9vw, 32px);
 }
 
+/* ============================================================ */
+/* TRACE-STACK (slide 10) — cards scatter in, snap to a vertical */
+/* column with a glowing trace line drawn behind them.            */
+/* ============================================================ */
+
+.trace-stack {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 0.9vw, 14px);
+  width: min(38vw, 460px);
+  padding: clamp(20px, 2vw, 32px) 0;
+}
+
+.trace-vline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.trace-vline path {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  filter:
+    drop-shadow(0 0 12px rgba(252, 175, 42, 0.7))
+    drop-shadow(0 0 28px rgba(252, 175, 42, 0.4));
+}
+
+.trace-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(14px, 1.4vw, 20px) clamp(18px, 1.7vw, 24px);
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow:
+    var(--glass-inset),
+    0 16px 36px rgba(0, 0, 0, 0.32);
+  transform-origin: center center;
+}
+
+.trace-card::before {
+  content: "";
+  position: absolute;
+  left: clamp(18px, 1.7vw, 24px);
+  top: 0;
+  width: 32px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 999px;
+}
+
+.trace-card:nth-child(2n)::before {
+  background: var(--orange);
+  box-shadow: 0 0 12px rgba(252, 175, 42, 0.5);
+}
+
+.trace-card.hot {
+  border-color: rgba(252, 175, 42, 0.42);
+  box-shadow:
+    var(--glass-inset),
+    0 0 32px rgba(252, 175, 42, 0.18),
+    0 16px 36px rgba(0, 0, 0, 0.32);
+}
+
+.trace-card.hot::before {
+  background: var(--orange);
+  box-shadow: 0 0 14px rgba(252, 175, 42, 0.6);
+}
+
+.trace-card h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(18px, 1.5vw, 26px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.trace-card.hot h3 {
+  color: var(--orange);
+}
+
+.trace-card p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: clamp(12px, 1vw, 16px);
+  line-height: 1.32;
+  font-weight: 400;
+}
+
 /* Trace slide: SVG path winding through the 5 cards.              */
 .slide--trace .chips-stage,
 .slide--playbook .chips-stage {
@@ -1770,7 +1877,7 @@ body[data-mode="cards"] {
   .slide.is-active .chips-stage .float:nth-child(6) { animation-delay: 1220ms, var(--d, 0s); }
 
   /* ============================================================ */
-  /* TRACE PATH — SVG line winds through the 5 cards on slide 10   */
+  /* TRACE PATH — SVG line winds through the 5 cards on slide 12   */
   /* ============================================================ */
 
   @keyframes m-trace-draw {
@@ -1778,12 +1885,60 @@ body[data-mode="cards"] {
     to { stroke-dashoffset: 0; }
   }
 
-  .slide--trace .trace-path path {
+  .slide--playbook .trace-path path {
     stroke-dasharray: 1000;
   }
 
-  .slide--trace.is-active .trace-path path {
+  .slide--playbook.is-active .trace-path path {
     animation: m-trace-draw 2200ms cubic-bezier(0.65, 0, 0.35, 1) 800ms both;
+  }
+
+  /* ============================================================ */
+  /* TRACE-STACK (slide 10) — scatter → snap into a column         */
+  /* ============================================================ */
+
+  @keyframes m-trace-snap {
+    0% {
+      opacity: 0;
+      transform:
+        translate(var(--ix, 0), var(--iy, 0))
+        rotate(var(--ir, 0deg));
+    }
+    25% {
+      opacity: 1;
+      transform:
+        translate(var(--ix, 0), var(--iy, 0))
+        rotate(var(--ir, 0deg));
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes m-vline-draw {
+    from { stroke-dashoffset: 200; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* Cards land at static state (transform 0). Animation overrides. */
+  .slide--trace.is-active .trace-card {
+    animation: m-trace-snap 1400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .slide--trace.is-active .trace-card:nth-child(2) { animation-delay: 700ms; }
+  .slide--trace.is-active .trace-card:nth-child(3) { animation-delay: 820ms; }
+  .slide--trace.is-active .trace-card:nth-child(4) { animation-delay: 940ms; }
+  .slide--trace.is-active .trace-card:nth-child(5) { animation-delay: 1060ms; }
+  .slide--trace.is-active .trace-card:nth-child(6) { animation-delay: 1180ms; }
+
+  /* Vertical trace line draws after the cards snap into place.     */
+  .slide--trace .trace-vline path {
+    stroke-dasharray: 200;
+  }
+
+  .slide--trace.is-active .trace-vline path {
+    animation: m-vline-draw 1600ms cubic-bezier(0.65, 0, 0.35, 1) 2400ms both;
   }
 }
 
