@@ -636,12 +636,12 @@ h2 span {
 
 .loop-step--ask {
   left: 50%;
-  top: 7%;
+  top: 4.5%;
   transform: translate(-50%, -50%);
 }
 
 .loop-step--answer {
-  left: 83%;
+  left: 78%;
   top: 39%;
   transform: translate(-50%, -50%);
 }
@@ -659,7 +659,7 @@ h2 span {
 }
 
 .loop-step--retrieve {
-  left: 17%;
+  left: 22%;
   top: 39%;
   transform: translate(-50%, -50%);
 }
