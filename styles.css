@@ -502,20 +502,20 @@ h2 span {
 
 .loop-node--ask {
   left: 50%;
-  top: 0;
-  transform: translateX(-50%);
+  top: 7%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-node--answer {
-  right: 8%;
-  top: 57%;
-  transform: translateY(-50%);
+  left: 77%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-node--forget {
-  left: 8%;
-  top: 57%;
-  transform: translateY(-50%);
+  left: 23%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-cycle--simple::before,
@@ -636,30 +636,32 @@ h2 span {
 
 .loop-step--ask {
   left: 50%;
-  top: 0;
-  transform: translateX(-50%);
+  top: 7%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-step--answer {
-  right: 15%;
+  left: 83%;
   top: 39%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .loop-step--capture {
-  right: 22%;
-  bottom: 8%;
+  left: 73%;
+  top: 79%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-step--structure {
-  left: 22%;
-  bottom: 8%;
+  left: 27%;
+  top: 79%;
+  transform: translate(-50%, -50%);
 }
 
 .loop-step--retrieve {
-  left: 15%;
+  left: 17%;
   top: 39%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .taks-stage {
