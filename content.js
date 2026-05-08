@@ -54,7 +54,7 @@ window.TONIK_TALK = {
       cards: [5, 6],
       html: `
         <p class="eyebrow">THE MISSING LAYER</p>
-        <h2>Most systems store what is true.<br><span>Very few store why it became true.</span></h2>
+        <h2>Most systems store <b class="negation">what is true.</b><br><span>Very few store why it became true.</span></h2>
         <div class="clock-grid">
           <section>
             <h3>State clock</h3>
@@ -76,7 +76,7 @@ window.TONIK_TALK = {
       html: `
         <div class="memory-copy">
           <p class="eyebrow">WHAT AGENTS NEED</p>
-          <h2>A knowledge base is not a folder.<br><span>It is organizational memory.</span></h2>
+          <h2>A knowledge base <b class="negation">is not a folder.</b><br><span>It is organizational memory.</span></h2>
           <p class="large-copy narrow">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
         </div>
         <img class="memory-art" src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
@@ -170,7 +170,7 @@ window.TONIK_TALK = {
       cards: [12, 13],
       html: `
         <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
-        <h2>The pattern repeats.</h2>
+        <h2 class="solo">The pattern repeats.</h2>
         <div class="pattern-grid">
           <article>
             <h3>Jaspur</h3>
