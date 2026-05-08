@@ -159,7 +159,7 @@ window.TONIK_TALK = {
           </div>
           <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
         </div>
-        <div class="devmode-stack" aria-label="Usable development alignment loop">
+        <div class="flow-stack" aria-label="Usable development alignment loop">
           <article><h3>PRD</h3><p>Start from a shared product spec.</p></article>
           <article><h3>Aligned tasks</h3><p>Decompose with team standards.</p></article>
           <article><h3>Enhanced plan</h3><p>Bring prior learning before code.</p></article>
@@ -246,15 +246,12 @@ window.TONIK_TALK = {
           <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
           <h2>Start small.<br><span>Make every run compound.</span></h2>
         </div>
-        <div class="chips-stage">
-          <svg class="trace-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 0 17 L 100 17 Q 100 33 0 33 Q 0 50 100 50 Q 100 70 0 70 Q 25 80 50 87" />
-          </svg>
-          <article class="float" style="--r:-2deg;--d:0s"><h3>01</h3><p>Pick one repeated workflow.</p></article>
-          <article class="float" style="--r:2deg;--d:-1.2s"><h3>02</h3><p>Capture decisions and standards.</p></article>
-          <article class="float" style="--r:-2deg;--d:-2.4s"><h3>03</h3><p>Connect the agent before it acts.</p></article>
-          <article class="float" style="--r:2deg;--d:-3.6s"><h3>04</h3><p>Let it reach the right tools.</p></article>
-          <article class="float" style="--r:-2deg;--d:-4.8s"><h3>05</h3><p>Write back learning every time.</p></article>
+        <div class="flow-stack" aria-label="Monday morning playbook">
+          <article><h3>01 · Pick one workflow</h3><p>One repeated, important loop.</p></article>
+          <article><h3>02 · Capture standards</h3><p>The decisions behind good work.</p></article>
+          <article><h3>03 · Connect first</h3><p>Bring memory in before the agent acts.</p></article>
+          <article><h3>04 · Reach the tools</h3><p>Let the agent use the right local tools.</p></article>
+          <article class="hot"><h3>05 · Write back</h3><p>End every task with a memory update.</p></article>
         </div>
       `,
     },
