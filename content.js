@@ -43,10 +43,10 @@ window.TONIK_TALK = {
           <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
           <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
         </div>
-        <div class="chips-stage chips-stage--stats">
-          <div class="float" style="--r:-3deg;--d:0s"><strong>25%</strong><span>work taken over</span></div>
-          <div class="float" style="--r:3deg;--d:-1.6s"><strong>25%</strong><span>work amplified</span></div>
-          <div class="float" style="--r:-2deg;--d:-3.2s"><strong>50%</strong><span>indirectly affected</span></div>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>25%</h3><p>work taken over</p></article>
+          <article class="float" style="--r:2deg;--d:-1.6s"><h3>25%</h3><p>work amplified</p></article>
+          <article class="float" style="--r:-2deg;--d:-3.2s"><h3>50%</h3><p>indirectly affected</p></article>
         </div>
       `,
     },
@@ -59,17 +59,15 @@ window.TONIK_TALK = {
           <p class="eyebrow">THE MISSING LAYER</p>
           <h2>Most systems store <b class="negation">what is true.</b><br><span>Very few store why it became true.</span></h2>
         </div>
-        <div class="chips-stage chips-stage--clocks">
-          <section class="float" style="--r:-3deg;--d:0s">
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s">
             <h3>State clock</h3>
-            <p>Files, dashboards, tickets, contracts, code, meeting notes.</p>
-            <small>Data context makes agents accurate.</small>
-          </section>
-          <section class="hot float" style="--r:3deg;--d:-2.2s">
+            <p>Files, dashboards, tickets, contracts, code, meeting notes. Data context makes agents accurate.</p>
+          </article>
+          <article class="float" style="--r:2deg;--d:-2.2s">
             <h3>Reasoning clock</h3>
-            <p>Why we chose it, what constrained us, what failed before, what mattered most.</p>
-            <small>Decision context makes agents institutional.</small>
-          </section>
+            <p>Why we chose it, what constrained us, what failed before, what mattered most. Decision context makes agents institutional.</p>
+          </article>
         </div>
       `,
     },
@@ -177,12 +175,12 @@ window.TONIK_TALK = {
           <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
           <h2 class="solo">The pattern repeats.</h2>
         </div>
-        <div class="chips-stage chips-stage--pattern">
-          <article class="float" style="--r:-4deg;--d:0s">
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s">
             <h3>Jaspur</h3>
             <p>The project memory became part of the deliverable.</p>
           </article>
-          <article class="float" style="--r:3deg;--d:-1.4s">
+          <article class="float" style="--r:2deg;--d:-1.4s">
             <h3>Johann</h3>
             <p>Games improved when the project stopped living only in the latest prompt.</p>
           </article>
@@ -190,9 +188,9 @@ window.TONIK_TALK = {
             <h3>Brian</h3>
             <p>Operators need memory, boundaries, and writeback.</p>
           </article>
-          <article class="float" style="--r:4deg;--d:-4.2s">
+          <article class="float" style="--r:2deg;--d:-4.2s">
             <h3>Ajit</h3>
-            <p>Precedent matters: decisions, relationships, and outcomes agents can reuse.</p>
+            <p>Precedent matters: decisions, relationships, outcomes agents can reuse.</p>
           </article>
         </div>
       `,
@@ -206,12 +204,12 @@ window.TONIK_TALK = {
           <p class="eyebrow">THE FRONTIER</p>
           <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
         </div>
-        <div class="chips-stage chips-stage--trace">
-          <span class="float" style="--r:-3deg;--d:0s">Observed</span>
-          <span class="float" style="--r:2deg;--d:-1s">Constraint</span>
-          <span class="float" style="--r:-2deg;--d:-2s">Tradeoff</span>
-          <span class="float" style="--r:3deg;--d:-3s">Action</span>
-          <span class="float" style="--r:-4deg;--d:-4s">Outcome</span>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>Observed</h3><p>What happened in the workflow.</p></article>
+          <article class="float" style="--r:2deg;--d:-1.2s"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
+          <article class="float" style="--r:-2deg;--d:-2.4s"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
+          <article class="float" style="--r:2deg;--d:-3.6s"><h3>Action</h3><p>What the agent or team did.</p></article>
+          <article class="hot float" style="--r:-2deg;--d:-4.8s"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
         </div>
       `,
     },
@@ -224,13 +222,13 @@ window.TONIK_TALK = {
           <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
           <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
         </div>
-        <div class="chips-stage chips-stage--professions">
-          <span class="float" style="--r:-4deg;--d:0s">Teacher: what examples worked</span>
-          <span class="float" style="--r:3deg;--d:-1s">Lawyer: why that clause moved</span>
-          <span class="float" style="--r:-2deg;--d:-2s">Engineer: decisions and incidents</span>
-          <span class="float" style="--r:4deg;--d:-3s">Manager: promises and tradeoffs</span>
-          <span class="float" style="--r:-3deg;--d:-4s">Researcher: sources and gaps</span>
-          <span class="float" style="--r:2deg;--d:-5s">Founder: bets, signals, and lessons</span>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>Teacher</h3><p>What examples worked.</p></article>
+          <article class="float" style="--r:2deg;--d:-1s"><h3>Lawyer</h3><p>Why that clause moved.</p></article>
+          <article class="float" style="--r:-2deg;--d:-2s"><h3>Engineer</h3><p>Decisions and incidents.</p></article>
+          <article class="float" style="--r:2deg;--d:-3s"><h3>Manager</h3><p>Promises and tradeoffs.</p></article>
+          <article class="float" style="--r:-2deg;--d:-4s"><h3>Researcher</h3><p>Sources and gaps.</p></article>
+          <article class="float" style="--r:2deg;--d:-5s"><h3>Founder</h3><p>Bets, signals, lessons.</p></article>
         </div>
       `,
     },
@@ -243,13 +241,13 @@ window.TONIK_TALK = {
           <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
           <h2>Start small.<br><span>Make every run compound.</span></h2>
         </div>
-        <ol class="chips-stage chips-stage--steps">
-          <li class="float" style="--r:-3deg;--d:0s">Pick one repeated workflow.</li>
-          <li class="float" style="--r:2deg;--d:-1.2s">Capture decisions and standards.</li>
-          <li class="float" style="--r:-2deg;--d:-2.4s">Connect the agent before it acts.</li>
-          <li class="float" style="--r:3deg;--d:-3.6s">Let it reach the right tools.</li>
-          <li class="float" style="--r:-4deg;--d:-4.8s">Write back learning every time.</li>
-        </ol>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>01</h3><p>Pick one repeated workflow.</p></article>
+          <article class="float" style="--r:2deg;--d:-1.2s"><h3>02</h3><p>Capture decisions and standards.</p></article>
+          <article class="float" style="--r:-2deg;--d:-2.4s"><h3>03</h3><p>Connect the agent before it acts.</p></article>
+          <article class="float" style="--r:2deg;--d:-3.6s"><h3>04</h3><p>Let it reach the right tools.</p></article>
+          <article class="float" style="--r:-2deg;--d:-4.8s"><h3>05</h3><p>Write back learning every time.</p></article>
+        </div>
       `,
     },
     {
