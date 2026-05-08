@@ -41,7 +41,7 @@ window.TONIK_TALK = {
         <div class="split-copy">
           <p class="eyebrow">AI AND WORK</p>
           <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
-          <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
+          <p class="source">Framing inspired by Hans Kári Vang's AI strategy launch talk at Smæran, Wednesday 6 May 2026.</p>
         </div>
         <div class="chips-stage">
           <article class="float" style="--r:-2deg;--d:0s"><h3>25%</h3><p>work taken over</p></article>
@@ -293,7 +293,7 @@ window.TONIK_TALK = {
       minute: "03:00-04:00",
       title: "AI Is A Shock. Coherence Is The Question.",
       slide: "Slide 3",
-      text: "This matters because AI is not a small feature. It is a general-purpose technology. It changes many kinds of work at once. Some tasks get automated. Some get amplified. Some are changed indirectly because expectations change. That is why the jobs debate can be a bit too narrow. The question for this room is not only what AI will replace. The better question is this: when the tools multiply, what keeps the work coherent? What keeps a company, a public institution, or a professional practice from becoming a pile of disconnected outputs? That is where knowledge management becomes strategic again."
+      text: "This matters because AI is not a small feature. It is a general-purpose technology. It changes many kinds of work at once. Some tasks get automated. Some get amplified. Some are changed indirectly because expectations change. I borrow this framing from Hans Kári Vang's talk at the AI strategy launch at Smæran on Wednesday. The jobs debate can be a bit too narrow. The better question for this room is this: when the tools multiply, what keeps the work coherent? What keeps a company, a public institution, or a professional practice from becoming a pile of disconnected outputs? That is where knowledge management becomes strategic again."
     },
     {
       minute: "04:00-05:00",
