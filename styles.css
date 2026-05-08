@@ -677,8 +677,6 @@ b.negation::after {
 
 /* Pure-column slides top-anchor for consistent eyebrow position.   */
 /* (slide--split slides override to row via .slide--split below.)   */
-.slide--memory .slide__inner,
-.slide--devmode .slide__inner,
 .slide--story .slide__inner,
 .slide--operator .slide__inner,
 .slide--statement .slide__inner {
@@ -792,35 +790,14 @@ b.negation::after {
   letter-spacing: 0.02em;
 }
 
-.slide--memory .memory-copy {
-  position: relative;
-  z-index: 2;
-  max-width: min(70vw, 1100px);
-}
-
-.slide--memory .memory-copy .large-copy {
-  max-width: min(56vw, 880px);
-}
-
-.memory-art {
-  position: absolute;
-  right: clamp(46px, 6vw, 130px);
-  bottom: clamp(180px, 24vh, 280px);
-  width: min(22vw, 320px);
-  max-height: 38vh;
-  object-fit: contain;
-  opacity: 0.88;
-  z-index: 1;
-}
-
 .verb-ring {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
   position: relative;
   z-index: 2;
-  width: min(62vw, 950px);
-  margin-top: clamp(28px, 3vw, 56px);
+  width: 100%;
+  margin-top: clamp(24px, 2.6vw, 44px);
 }
 
 .verb-ring span,
@@ -844,6 +821,10 @@ b.negation::after {
   gap: 0;
 }
 
+.slide--split.slide--loop .slide__inner {
+  gap: clamp(40px, 6vw, 96px);
+}
+
 .slide--loop .eyebrow {
   margin-bottom: clamp(14px, 1.6vw, 22px);
 }
@@ -854,6 +835,92 @@ b.negation::after {
   gap: clamp(24px, 3.2vw, 56px);
   width: 100%;
   margin-top: clamp(22px, 3vw, 42px);
+}
+
+.slide--split.slide--loop .loop-grid {
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 1.8vw, 26px);
+  width: min(46vw, 660px);
+  margin-top: 0;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.slide--split.slide--loop .loop-panel {
+  min-height: 0;
+  padding: clamp(16px, 1.8vw, 24px) clamp(18px, 1.9vw, 26px);
+}
+
+.slide--split.slide--loop .loop-cycle {
+  height: clamp(170px, 15vw, 220px);
+  margin-top: clamp(10px, 1.2vw, 18px);
+}
+
+.slide--split.slide--loop .loop-cycle--simple,
+.slide--split.slide--loop .loop-cycle--usable {
+  width: 100%;
+  max-width: 480px;
+}
+
+.slide--split.slide--loop .loop-cycle--simple::before {
+  width: clamp(130px, 11vw, 170px);
+  height: clamp(130px, 11vw, 170px);
+}
+
+.slide--split.slide--loop .loop-cycle--simple::after {
+  left: calc(50% + clamp(46px, 4.2vw, 64px));
+  top: calc(54% - clamp(60px, 5.4vw, 80px));
+}
+
+.slide--split.slide--loop .loop-cycle--usable::before {
+  width: clamp(155px, 13vw, 210px);
+  height: clamp(155px, 13vw, 210px);
+}
+
+.slide--split.slide--loop .loop-cycle--usable::after {
+  left: calc(50% + clamp(58px, 5vw, 80px));
+  top: calc(52% - clamp(76px, 6.2vw, 100px));
+}
+
+.slide--split.slide--loop .loop-cycle--usable img {
+  width: clamp(72px, 6.2vw, 96px);
+}
+
+.slide--split.slide--loop .loop-node {
+  min-width: 92px;
+  font-size: clamp(13px, 1vw, 17px);
+}
+
+.slide--split.slide--loop .loop-node span:not(.fishbowl) {
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+}
+
+.slide--split.slide--loop .fishbowl {
+  width: 52px;
+  height: 44px;
+}
+
+.slide--split.slide--loop .fishbowl::before {
+  left: 6px;
+  right: 6px;
+  top: 14px;
+  height: 3px;
+}
+
+.slide--split.slide--loop .fishbowl i {
+  left: 18px;
+  top: 22px;
+  width: 16px;
+  height: 10px;
+}
+
+.slide--split.slide--loop .loop-step {
+  min-width: 88px;
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: clamp(13px, 0.95vw, 16px);
 }
 
 .loop-panel {
@@ -1173,56 +1240,103 @@ b.negation::after {
   margin-bottom: clamp(14px, 1.6vw, 22px);
 }
 
-.devmode-flow {
-  display: grid;
-  grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto;
-  align-items: center;
-  gap: clamp(12px, 1.5vw, 22px);
-  width: 100%;
-  margin-top: clamp(34px, 3.8vw, 58px);
+.devmode-stack {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 0.9vw, 14px);
+  width: min(38vw, 480px);
+  padding: clamp(20px, 2vw, 32px) 0;
 }
 
-.devmode-flow span {
-  padding: 12px 18px;
-  color: var(--text);
+.devmode-stack::before {
+  content: "";
+  position: absolute;
+  top: clamp(40px, 4vw, 64px);
+  bottom: clamp(40px, 4vw, 64px);
+  left: clamp(22px, 2vw, 30px);
+  width: 4px;
+  background: linear-gradient(180deg, rgba(147, 197, 253, 0.55), rgba(252, 175, 42, 0.95));
+  border-radius: 999px;
+  box-shadow: 0 0 14px rgba(252, 175, 42, 0.4);
+  z-index: 0;
+}
+
+.devmode-stack article {
+  position: relative;
+  z-index: 1;
+  padding: clamp(14px, 1.4vw, 20px) clamp(18px, 1.7vw, 24px) clamp(14px, 1.4vw, 20px) clamp(54px, 5vw, 72px);
   background: var(--glass-fill);
   border: 1px solid var(--glass-border);
-  border-radius: 999px;
+  border-radius: 18px;
   backdrop-filter: var(--glass-blur-light);
   -webkit-backdrop-filter: var(--glass-blur-light);
-  box-shadow: var(--glass-inset);
-  font-size: clamp(14px, 1.2vw, 20px);
-  font-weight: 700;
-  letter-spacing: -0.005em;
-  white-space: nowrap;
-}
-
-.devmode-flow span:last-child {
-  color: var(--orange);
-  border-color: rgba(252, 175, 42, 0.4);
   box-shadow:
     var(--glass-inset),
-    0 0 28px rgba(252, 175, 42, 0.18);
+    0 16px 36px rgba(0, 0, 0, 0.32);
 }
 
-.devmode-flow b {
-  display: block;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(147, 197, 253, 0.4), rgba(252, 175, 42, 0.6));
+.devmode-stack article::before {
+  content: "";
+  position: absolute;
+  left: clamp(22px, 2vw, 30px);
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--blue);
   border-radius: 999px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(147, 197, 253, 0.6);
 }
 
-.devmode-contrast {
+.devmode-stack article.hot {
+  border-color: rgba(252, 175, 42, 0.42);
+  box-shadow:
+    var(--glass-inset),
+    0 0 32px rgba(252, 175, 42, 0.18),
+    0 16px 36px rgba(0, 0, 0, 0.32);
+}
+
+.devmode-stack article.hot::before {
+  background: var(--orange);
+  box-shadow: 0 0 14px rgba(252, 175, 42, 0.7);
+}
+
+.devmode-stack h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(18px, 1.5vw, 26px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.devmode-stack article.hot h3 {
+  color: var(--orange);
+}
+
+.devmode-stack p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: clamp(12px, 1vw, 16px);
+  line-height: 1.32;
+  font-weight: 400;
+}
+
+.slide--devmode .devmode-contrast {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2vw, 32px);
-  margin-top: clamp(34px, 3.6vw, 50px);
-  font-size: clamp(18px, 1.65vw, 28px);
+  flex-wrap: wrap;
+  gap: clamp(10px, 1.4vw, 22px);
+  margin-top: clamp(26px, 2.8vw, 40px);
+  font-size: clamp(14px, 1.25vw, 20px);
   font-weight: 700;
 }
 
-.devmode-contrast span {
-  padding: 12px 22px;
+.slide--devmode .devmode-contrast span {
+  padding: 10px 18px;
   color: var(--text);
   background: var(--glass-fill);
   border: 1px solid var(--glass-border);
@@ -1233,7 +1347,7 @@ b.negation::after {
   letter-spacing: -0.005em;
 }
 
-.devmode-contrast span:last-child {
+.slide--devmode .devmode-contrast span:last-child {
   color: var(--orange);
   border-color: rgba(252, 175, 42, 0.42);
   box-shadow:
@@ -1241,7 +1355,7 @@ b.negation::after {
     0 0 30px rgba(252, 175, 42, 0.24);
 }
 
-.devmode-contrast strong {
+.slide--devmode .devmode-contrast strong {
   color: var(--soft);
   font-weight: 600;
 }
@@ -1690,7 +1804,6 @@ body[data-mode="cards"] {
   /* Cover art / image stages pop in alongside the slam.             */
   .slide.is-active .cover-art,
   .slide.is-active .image-stage,
-  .slide.is-active .memory-art,
   .slide.is-active .taks-stage,
   .slide--closing.is-active img {
     animation: m-reveal 460ms var(--ease-expo) 380ms both;
@@ -1769,36 +1882,31 @@ body[data-mode="cards"] {
 
   /* Connector lines — draw rip from the left.                       */
   .slide.is-active .flow-line b,
-  .slide.is-active .devmode-flow b,
   .slide.is-active .operator-line,
   .slide.is-active .trace-chain span + span::before {
     transform-origin: left center;
     animation: m-draw-x 280ms var(--ease-expo) both;
   }
 
-  /* Devmode flow chip cascade.                                      */
-  .slide.is-active .devmode-flow span,
+  /* Devmode stack — vertical cascade through the alignment loop.    */
+  .slide.is-active .devmode-stack article,
   .slide.is-active .devmode-contrast span,
   .slide.is-active .devmode-contrast strong {
     animation: m-reveal 280ms var(--ease-expo) both;
   }
 
-  .slide.is-active .devmode-flow span:nth-child(1) { animation-delay: 360ms; }
-  .slide.is-active .devmode-flow b:nth-child(2) { animation-delay: 420ms; }
-  .slide.is-active .devmode-flow span:nth-child(3) { animation-delay: 480ms; }
-  .slide.is-active .devmode-flow b:nth-child(4) { animation-delay: 540ms; }
-  .slide.is-active .devmode-flow span:nth-child(5) { animation-delay: 600ms; }
-  .slide.is-active .devmode-flow b:nth-child(6) { animation-delay: 660ms; }
-  .slide.is-active .devmode-flow span:nth-child(7) { animation-delay: 720ms; }
-  .slide.is-active .devmode-flow b:nth-child(8) { animation-delay: 780ms; }
-  .slide.is-active .devmode-flow span:nth-child(9) {
-    animation: m-reveal 320ms var(--ease-expo) 900ms both;
+  .slide.is-active .devmode-stack article:nth-child(1) { animation-delay: 720ms; }
+  .slide.is-active .devmode-stack article:nth-child(2) { animation-delay: 820ms; }
+  .slide.is-active .devmode-stack article:nth-child(3) { animation-delay: 920ms; }
+  .slide.is-active .devmode-stack article:nth-child(4) { animation-delay: 1020ms; }
+  .slide.is-active .devmode-stack article:nth-child(5) {
+    animation: m-reveal 320ms var(--ease-expo) 1120ms both;
   }
 
-  .slide.is-active .devmode-contrast span:first-child { animation-delay: 740ms; }
-  .slide.is-active .devmode-contrast strong { animation-delay: 800ms; }
+  .slide.is-active .devmode-contrast span:first-child { animation-delay: 540ms; }
+  .slide.is-active .devmode-contrast strong { animation-delay: 600ms; }
   .slide.is-active .devmode-contrast span:last-child {
-    animation: m-reveal 320ms var(--ease-expo) 920ms both;
+    animation: m-reveal 320ms var(--ease-expo) 720ms both;
   }
 
   /* Loop diagram timing.                                            */
@@ -1894,57 +2002,88 @@ body[data-mode="cards"] {
   }
 
   /* ============================================================ */
-  /* TRACE-STACK (slide 10) — scatter → snap into a column         */
+  /* TRACE-STACK (slide 10)                                         */
+  /* Cards start visible-and-scattered (the unorganized state).    */
+  /* After a beat, each one swings on its own curved arc into the  */
+  /* vertical column. The line waits until every card is in place, */
+  /* then draws top-to-bottom across the full column height.       */
   /* ============================================================ */
 
-  @keyframes m-trace-snap {
-    0% {
-      opacity: 0;
-      transform:
-        translate(var(--ix, 0), var(--iy, 0))
-        rotate(var(--ir, 0deg));
-    }
-    25% {
-      opacity: 1;
-      transform:
-        translate(var(--ix, 0), var(--iy, 0))
-        rotate(var(--ir, 0deg));
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0) rotate(0deg);
-    }
+  @keyframes m-glide-1 {
+    0%   { transform: translate(-340px, -120px) rotate(-22deg) scale(0.92); }
+    55%  { transform: translate(-90px, 80px) rotate(-6deg) scale(1.02); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  }
+
+  @keyframes m-glide-2 {
+    0%   { transform: translate(280px, -80px) rotate(20deg) scale(0.94); }
+    55%  { transform: translate(140px, 60px) rotate(8deg) scale(1.02); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  }
+
+  @keyframes m-glide-3 {
+    0%   { transform: translate(-300px, 140px) rotate(18deg) scale(0.92); }
+    55%  { transform: translate(-60px, -50px) rotate(6deg) scale(1.02); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  }
+
+  @keyframes m-glide-4 {
+    0%   { transform: translate(360px, 60px) rotate(-24deg) scale(0.94); }
+    55%  { transform: translate(80px, 80px) rotate(-8deg) scale(1.02); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  }
+
+  @keyframes m-glide-5 {
+    0%   { transform: translate(-260px, 200px) rotate(14deg) scale(0.94); }
+    55%  { transform: translate(-40px, 50px) rotate(4deg) scale(1.02); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
   }
 
   @keyframes m-vline-draw {
-    from { stroke-dashoffset: 200; }
+    from { stroke-dashoffset: 2000; }
     to { stroke-dashoffset: 0; }
   }
 
-  /* Cards land at static state (transform 0). Animation overrides. */
-  .slide--trace.is-active .trace-card {
-    animation: m-trace-snap 1400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  /* Each card animates on its own curve. `both` fill applies the
+     0% state during the delay — that's the unorganized beat. */
+  .slide--trace.is-active .trace-card:nth-child(2) {
+    animation: m-glide-1 2800ms cubic-bezier(0.22, 1, 0.36, 1) 2000ms both;
+  }
+  .slide--trace.is-active .trace-card:nth-child(3) {
+    animation: m-glide-2 2800ms cubic-bezier(0.22, 1, 0.36, 1) 2180ms both;
+  }
+  .slide--trace.is-active .trace-card:nth-child(4) {
+    animation: m-glide-3 2800ms cubic-bezier(0.22, 1, 0.36, 1) 2360ms both;
+  }
+  .slide--trace.is-active .trace-card:nth-child(5) {
+    animation: m-glide-4 2800ms cubic-bezier(0.22, 1, 0.36, 1) 2540ms both;
+  }
+  .slide--trace.is-active .trace-card:nth-child(6) {
+    animation: m-glide-5 2800ms cubic-bezier(0.22, 1, 0.36, 1) 2720ms both;
   }
 
-  .slide--trace.is-active .trace-card:nth-child(2) { animation-delay: 700ms; }
-  .slide--trace.is-active .trace-card:nth-child(3) { animation-delay: 820ms; }
-  .slide--trace.is-active .trace-card:nth-child(4) { animation-delay: 940ms; }
-  .slide--trace.is-active .trace-card:nth-child(5) { animation-delay: 1060ms; }
-  .slide--trace.is-active .trace-card:nth-child(6) { animation-delay: 1180ms; }
-
-  /* Vertical trace line draws after the cards snap into place.     */
+  /* Vertical trace line stays hidden until every card has settled, */
+  /* then draws top-to-bottom across the full column height.        */
+  /* Dash array deliberately much larger than the rendered path so  */
+  /* the offset hides it cleanly on any viewport.                   */
   .slide--trace .trace-vline path {
-    stroke-dasharray: 200;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
   }
 
   .slide--trace.is-active .trace-vline path {
-    animation: m-vline-draw 1600ms cubic-bezier(0.65, 0, 0.35, 1) 2400ms both;
+    animation: m-vline-draw 2200ms cubic-bezier(0.65, 0, 0.35, 1) 5800ms both;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .chips-stage .float {
     opacity: 1;
+  }
+
+  /* Show the trace line in its final state when motion is reduced. */
+  .slide--trace .trace-vline path {
+    stroke-dashoffset: 0;
   }
 }
 
@@ -1991,7 +2130,6 @@ body[data-mode="cards"] {
   }
 
   .cover-art,
-  .memory-art,
   .taks-stage {
     position: static;
     width: min(70vw, 360px);
@@ -2000,7 +2138,6 @@ body[data-mode="cards"] {
   .stats-row,
   .clock-grid,
   .verb-ring,
-  .devmode-flow,
   .pattern-grid,
   .profession-grid,
   .steps,
@@ -2008,6 +2145,10 @@ body[data-mode="cards"] {
   .operator-grid,
   .loop-grid {
     grid-template-columns: 1fr;
+  }
+
+  .devmode-stack {
+    width: 100%;
   }
 
   .stats-row,

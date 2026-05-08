@@ -73,30 +73,34 @@ window.TONIK_TALK = {
     },
     {
       id: "agent-memory",
-      className: "slide--memory",
+      className: "slide--split slide--memory",
       cards: [7, 8],
       html: `
-        <div class="memory-copy">
+        <div class="split-copy">
           <p class="eyebrow">WHAT AGENTS NEED</p>
           <h2>A knowledge base <b class="negation">is not a folder.</b><br><span>It is organizational memory.</span></h2>
-          <p class="large-copy narrow">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
+          <p class="large-copy">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
+          <div class="verb-ring">
+            <span>read before acting</span>
+            <span>use local tools</span>
+            <span>govern access</span>
+            <span>write back learning</span>
+          </div>
         </div>
-        <img class="memory-art" src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
-        <div class="verb-ring">
-          <span>read before acting</span>
-          <span>use local tools</span>
-          <span>govern access</span>
-          <span>write back learning</span>
+        <div class="image-stage">
+          <img src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
         </div>
       `,
     },
     {
       id: "usable-loop",
-      className: "slide--loop",
+      className: "slide--split slide--loop",
       cards: [9],
       html: `
-        <p class="eyebrow">THE SMALLEST LOOP</p>
-        <h2>One loop forgets.<br><span>One loop compounds.</span></h2>
+        <div class="split-copy">
+          <p class="eyebrow">THE SMALLEST LOOP</p>
+          <h2>One loop forgets.<br><span>One loop compounds.</span></h2>
+        </div>
         <div class="loop-grid">
           <section class="loop-panel loop-panel--forget">
             <p class="loop-label">Without a memory layer</p>
@@ -142,28 +146,26 @@ window.TONIK_TALK = {
     },
     {
       id: "devmode-story",
-      className: "slide--devmode",
+      className: "slide--split slide--devmode",
       cards: [11],
       html: `
-        <p class="eyebrow">PROOF 2 · SOFTWARE DEVELOPMENT</p>
-        <h2>Fast code is easy.<br><span>Aligned code is engineered.</span></h2>
-        <div class="devmode-flow" aria-label="Usable development alignment loop">
-          <span>PRD</span>
-          <b></b>
-          <span>aligned tasks</span>
-          <b></b>
-          <span>enhanced plan</span>
-          <b></b>
-          <span>tested code</span>
-          <b></b>
-          <span>commit + learn</span>
+        <div class="split-copy">
+          <p class="eyebrow">PROOF 2 · SOFTWARE DEVELOPMENT</p>
+          <h2>Fast code is easy.<br><span>Aligned code is engineered.</span></h2>
+          <div class="devmode-contrast">
+            <span>review-time cleanup</span>
+            <strong>→</strong>
+            <span>plan-time alignment</span>
+          </div>
+          <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
         </div>
-        <div class="devmode-contrast">
-          <span>review-time cleanup</span>
-          <strong>→</strong>
-          <span>plan-time alignment</span>
+        <div class="devmode-stack" aria-label="Usable development alignment loop">
+          <article><h3>PRD</h3><p>Start from a shared product spec.</p></article>
+          <article><h3>Aligned tasks</h3><p>Decompose with team standards.</p></article>
+          <article><h3>Enhanced plan</h3><p>Bring prior learning before code.</p></article>
+          <article><h3>Tested code</h3><p>Implement, verify, ship.</p></article>
+          <article class="hot"><h3>Commit + learn</h3><p>Write the lesson back to memory.</p></article>
         </div>
-        <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
       `,
     },
     {
@@ -206,13 +208,13 @@ window.TONIK_TALK = {
         </div>
         <div class="trace-stack">
           <svg class="trace-vline" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 5 4 L 5 96" />
+            <path d="M 5 0 L 5 100" />
           </svg>
-          <article class="trace-card" style="--ix:-220px;--iy:-40px;--ir:-14deg"><h3>Observed</h3><p>What happened in the workflow.</p></article>
-          <article class="trace-card" style="--ix:180px;--iy:-30px;--ir:18deg"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
-          <article class="trace-card" style="--ix:-200px;--iy:60px;--ir:12deg"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
-          <article class="trace-card" style="--ix:240px;--iy:-10px;--ir:-16deg"><h3>Action</h3><p>What the agent or team did.</p></article>
-          <article class="trace-card hot" style="--ix:-160px;--iy:80px;--ir:10deg"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
+          <article class="trace-card"><h3>Observed</h3><p>What happened in the workflow.</p></article>
+          <article class="trace-card"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
+          <article class="trace-card"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
+          <article class="trace-card"><h3>Action</h3><p>What the agent or team did.</p></article>
+          <article class="trace-card hot"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
         </div>
       `,
     },
