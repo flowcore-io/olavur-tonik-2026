@@ -289,6 +289,7 @@ h2 span {
 .slide--memory .slide__inner,
 .slide--devmode .slide__inner,
 .slide--story .slide__inner,
+.slide--pattern .slide__inner,
 .slide--operator .slide__inner,
 .slide--trace .slide__inner,
 .slide--statement .slide__inner,
@@ -783,6 +784,49 @@ h2 span {
   font-size: clamp(11px, 0.95vw, 15px);
 }
 
+.slide--pattern .slide__inner {
+  justify-content: flex-start;
+  padding-top: clamp(34px, 4.4vw, 72px);
+}
+
+.slide--pattern h2 {
+  max-width: none;
+  font-size: clamp(40px, 4vw, 68px);
+}
+
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 46px);
+  width: 100%;
+  margin-top: clamp(34px, 4vw, 58px);
+}
+
+.pattern-grid article {
+  min-height: 168px;
+  padding-top: 18px;
+  border-top: 3px solid rgba(147, 197, 253, 0.28);
+}
+
+.pattern-grid article:nth-child(2n) {
+  border-color: rgba(252, 175, 42, 0.42);
+}
+
+.pattern-grid h3 {
+  color: var(--text);
+  font-size: clamp(28px, 2.4vw, 42px);
+  line-height: 1;
+}
+
+.pattern-grid p {
+  max-width: 24ch;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: clamp(17px, 1.35vw, 24px);
+  line-height: 1.18;
+  font-weight: 500;
+}
+
 .slide--game .image-stage img {
   object-fit: contain;
   background: #05070a;
@@ -1002,6 +1046,7 @@ body[data-mode="cards"] {
   .clock-grid,
   .verb-ring,
   .devmode-flow,
+  .pattern-grid,
   .profession-grid,
   .steps,
   .trace-chain,

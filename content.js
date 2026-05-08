@@ -1,8 +1,8 @@
 window.TONIK_TALK = {
   title: "Same AI. Different Results.",
-  subtitle: "Why your agents need their own knowledge base.",
+  subtitle: "Why your agents need organizational memory.",
   speaker: "Olavur Ellefsen, CEO and co-founder of Usable",
-  event: "Tonik 2026 · Tórshavn · 8 May 2026",
+  event: "Tonik 2026 · Torshavn · 8 May 2026",
   slides: [
     {
       id: "cover",
@@ -12,7 +12,7 @@ window.TONIK_TALK = {
         <div class="cover-copy">
           <p class="eyebrow">TONIK 2026 · KEYNOTE</p>
           <h1>Same AI.<br><span>Different Results.</span></h1>
-          <p class="subtitle">Why your agents need their own knowledge base.</p>
+          <p class="subtitle">Why your agents need organizational memory.</p>
           <p class="meta">Olavur Ellefsen · CEO and co-founder of Usable</p>
         </div>
         <img class="cover-art" src="./assets/knowledge-tree.png" alt="Knowledge tree made of connected digital branches">
@@ -39,13 +39,13 @@ window.TONIK_TALK = {
       cards: [4],
       html: `
         <p class="eyebrow">AI AND WORK</p>
-        <h2>AI is a technology shock.<br><span>The landing is uneven.</span></h2>
+        <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
         <div class="stats-row">
           <div><strong>25%</strong><span>work taken over</span></div>
           <div><strong>25%</strong><span>work amplified</span></div>
           <div><strong>50%</strong><span>indirectly affected</span></div>
         </div>
-        <p class="source">Framing inspired by Hans Kári Vang's AI strategy launch talk at Smæran, Wednesday 6 May 2026.</p>
+        <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
       `,
     },
     {
@@ -54,17 +54,17 @@ window.TONIK_TALK = {
       cards: [5, 6],
       html: `
         <p class="eyebrow">THE MISSING LAYER</p>
-        <h2>Your systems store state.<br><span>Your people carry reasoning.</span></h2>
+        <h2>Most systems store what is true.<br><span>Very few store why it became true.</span></h2>
         <div class="clock-grid">
           <section>
             <h3>State clock</h3>
             <p>Files, dashboards, tickets, contracts, code, meeting notes.</p>
-            <small>What is true now.</small>
+            <small>Data context makes agents accurate.</small>
           </section>
           <section class="hot">
-            <h3>Event clock</h3>
-            <p>Why we chose it, what constrained us, who objected, what happened after.</p>
-            <small>Why it became true.</small>
+            <h3>Reasoning clock</h3>
+            <p>Why we chose it, what constrained us, what failed before, what mattered most.</p>
+            <small>Decision context makes agents institutional.</small>
           </section>
         </div>
       `,
@@ -76,13 +76,14 @@ window.TONIK_TALK = {
       html: `
         <div class="memory-copy">
           <p class="eyebrow">WHAT AGENTS NEED</p>
-          <h2>A knowledge base is not a folder.<br><span>It is a working memory.</span></h2>
+          <h2>A knowledge base is not a folder.<br><span>It is organizational memory.</span></h2>
+          <p class="large-copy narrow">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
         </div>
         <img class="memory-art" src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
         <div class="verb-ring">
           <span>read before acting</span>
-          <span>cite what matters</span>
-          <span>enforce standards</span>
+          <span>use local tools</span>
+          <span>govern access</span>
           <span>write back learning</span>
         </div>
       `,
@@ -111,10 +112,10 @@ window.TONIK_TALK = {
             <div class="loop-cycle loop-cycle--usable" aria-label="Ask, get answer, capture, structure, retrieve">
               <img src="./assets/usable-mascot.png" alt="Usable mascot">
               <span class="loop-step loop-step--ask">Ask</span>
-              <span class="loop-step loop-step--answer">Answer</span>
+              <span class="loop-step loop-step--answer">Act</span>
               <span class="loop-step loop-step--capture">Capture</span>
-              <span class="loop-step loop-step--structure">Structure</span>
-              <span class="loop-step loop-step--retrieve">Retrieve</span>
+              <span class="loop-step loop-step--structure">Govern</span>
+              <span class="loop-step loop-step--retrieve">Reuse</span>
             </div>
           </section>
         </div>
@@ -126,14 +127,14 @@ window.TONIK_TALK = {
       cards: [10],
       html: `
         <div class="split-copy">
-          <p class="eyebrow">STORY 1 · PUBLIC SERVICE</p>
+          <p class="eyebrow">PROOF 1 · PUBLIC SERVICE</p>
           <h2>TAKS gave AI<br><span>a Faroese name.</span></h2>
-          <p class="large-copy">Meet Eyðei: a public assistant grounded in official TAKS knowledge, source-aware answers, and feedback loops.</p>
-          <p class="source">Eyðei, Tollakur and Skatta Ró · live at taks.fo · built with Usable</p>
+          <p class="large-copy">Eydei works because the assistant is grounded in official TAKS knowledge, careful with sources, and connected to a feedback loop.</p>
+          <p class="source">Eydei, Tollakur and Skatta Ro · live at taks.fo · built with Usable</p>
         </div>
         <div class="taks-stage taks-stage--video">
-          <video class="taks-video" src="./assets/taks-eydei-demo.mp4" poster="./assets/taks-eydei-poster.png" autoplay muted loop playsinline preload="metadata" aria-label="TAKS video introducing Eyðei, Tollakur and Skatta Ró"></video>
-          <img class="taks-poster" src="./assets/taks-eydei-poster.png" alt="TAKS chatbot Eyðei greeting users on taks.fo">
+          <video class="taks-video" src="./assets/taks-eydei-demo.mp4" poster="./assets/taks-eydei-poster.png" autoplay muted loop playsinline preload="metadata" aria-label="TAKS video introducing Eydei, Tollakur and Skatta Ro"></video>
+          <img class="taks-poster" src="./assets/taks-eydei-poster.png" alt="TAKS chatbot Eydei greeting users on taks.fo">
         </div>
       `,
     },
@@ -142,7 +143,7 @@ window.TONIK_TALK = {
       className: "slide--devmode",
       cards: [11],
       html: `
-        <p class="eyebrow">STORY 2 · SOFTWARE DEVELOPMENT</p>
+        <p class="eyebrow">PROOF 2 · SOFTWARE DEVELOPMENT</p>
         <h2>Fast code is easy.<br><span>Aligned code is engineered.</span></h2>
         <div class="devmode-flow" aria-label="Usable development alignment loop">
           <span>PRD</span>
@@ -160,65 +161,43 @@ window.TONIK_TALK = {
           <strong>→</strong>
           <span>plan-time alignment</span>
         </div>
-        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Julius's "From Fast to Aligned".</p>
+        <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
       `,
     },
     {
-      id: "strategy-story",
-      className: "slide--story",
-      cards: [12],
+      id: "pattern-repeats",
+      className: "slide--pattern",
+      cards: [12, 13],
       html: `
-        <p class="eyebrow">STORY 3 · NATIONAL STRATEGY</p>
-        <h2>The project memory became<br><span>a deliverable.</span></h2>
-        <div class="flow-line">
-          <span>stakeholder input</span>
-          <b></b>
-          <span>fragments</span>
-          <b></b>
-          <span>synthesis</span>
-          <b></b>
-          <span>living strategy</span>
+        <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
+        <h2>The pattern repeats.</h2>
+        <div class="pattern-grid">
+          <article>
+            <h3>Jaspur</h3>
+            <p>The project memory became part of the deliverable.</p>
+          </article>
+          <article>
+            <h3>Johann</h3>
+            <p>Games improved when the project stopped living only in the latest prompt.</p>
+          </article>
+          <article>
+            <h3>Brian</h3>
+            <p>Operators need memory, boundaries, and writeback.</p>
+          </article>
+          <article>
+            <h3>Ajit</h3>
+            <p>Precedent matters: decisions, relationships, and outcomes agents can reuse.</p>
+          </article>
         </div>
-        <p class="large-copy narrow">Not a finished PDF with context thrown away. A memory layer the next phase can ask questions of.</p>
-      `,
-    },
-    {
-      id: "game-story",
-      className: "slide--split slide--game",
-      cards: [13],
-      html: `
-        <div class="split-copy">
-          <p class="eyebrow">STORY 4 · GAME DEVELOPMENT</p>
-          <h2>From one-shot prompting<br>to a specialist workspace.</h2>
-          <p class="large-copy">The agent got better when the project stopped living only in the conversation.</p>
-        </div>
-        <div class="image-stage wide">
-          <img src="./assets/game-dialogue.png" alt="Game development dialogue between a developer and an AI assistant">
-        </div>
-      `,
-    },
-    {
-      id: "operator-story",
-      className: "slide--operator",
-      cards: [14],
-      html: `
-        <p class="eyebrow">STORY 5 · AUTONOMOUS OPERATORS</p>
-        <h2>Same engine.<br><span>Different harness.</span><br>One memory layer.</h2>
-        <div class="operator-grid">
-          <img src="./assets/langa-stina.jpg" alt="Langa Stina operator emblem">
-          <div class="operator-line"></div>
-          <img src="./assets/operator-receipt.png" alt="Agent result receipt posted back after work">
-        </div>
-        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Brian Bischoff's operator talk.</p>
       `,
     },
     {
       id: "decision-traces",
       className: "slide--trace",
-      cards: [15],
+      cards: [14, 15],
       html: `
         <p class="eyebrow">THE FRONTIER</p>
-        <h2>Agents should leave<br><span>decision traces.</span></h2>
+        <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
         <div class="trace-chain">
           <span>Observed</span>
           <span>Constraint</span>
@@ -226,34 +205,22 @@ window.TONIK_TALK = {
           <span>Action</span>
           <span>Outcome</span>
         </div>
-        <p class="large-copy narrow">The strategic asset is not only data. It is accumulated judgement that machines can reuse.</p>
-        <p class="source">From Thursday's Usable Fragments event at Reinsaríið: Ajit Jaokar's Context Graphs guest talk.</p>
-      `,
-    },
-    {
-      id: "simulation",
-      className: "slide--statement",
-      cards: [16],
-      html: `
-        <p class="eyebrow">BEYOND RETRIEVAL</p>
-        <h2>If your agent can only search,<br><span>it remembers facts.</span></h2>
-        <p class="statement">If it can ask "what usually happens when we do this?", it is beginning to reason over precedent.</p>
       `,
     },
     {
       id: "professions",
       className: "slide--professions",
-      cards: [17],
+      cards: [16, 17],
       html: `
         <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
-        <h2>Your knowledge base is where<br><span>local judgement becomes reusable.</span></h2>
+        <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
         <div class="profession-grid">
-          <span>Teacher: examples that worked</span>
-          <span>Lawyer: clauses and rationale</span>
+          <span>Teacher: what examples worked</span>
+          <span>Lawyer: why that clause moved</span>
           <span>Engineer: decisions and incidents</span>
-          <span>Manager: goals, tradeoffs, promises</span>
+          <span>Manager: promises and tradeoffs</span>
           <span>Researcher: sources and gaps</span>
-          <span>Founder: market learning and bets</span>
+          <span>Founder: bets, signals, and lessons</span>
         </div>
       `,
     },
@@ -265,11 +232,11 @@ window.TONIK_TALK = {
         <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
         <h2>Start small.<br><span>Make every run compound.</span></h2>
         <ol class="steps">
-          <li>Capture your top repeated decisions.</li>
-          <li>Turn review comments into standards.</li>
+          <li>Pick one repeated workflow.</li>
+          <li>Capture decisions and standards.</li>
           <li>Connect the agent before it acts.</li>
-          <li>Require sources for important work.</li>
-          <li>Write the result back every time.</li>
+          <li>Let it reach the right tools.</li>
+          <li>Write back learning every time.</li>
         </ol>
       `,
     },
@@ -281,7 +248,7 @@ window.TONIK_TALK = {
         <div>
           <p class="eyebrow">THE MAIN MESSAGE</p>
           <h2>The memory layer<br><span>is the moat.</span></h2>
-          <p class="large-copy narrow">Same AI. Different knowledge base. Different results.</p>
+          <p class="large-copy narrow">Same AI. Different memory. Different results.</p>
           <p class="meta">usable.dev</p>
         </div>
         <img src="./assets/usable-mascot.png" alt="Usable mascot">
@@ -291,123 +258,123 @@ window.TONIK_TALK = {
   cards: [
     {
       minute: "00:00-01:00",
-      title: "Open With The Title",
+      title: "Same AI. Different Results.",
       slide: "Slide 1",
-      text: "Good morning. The official title of this talk is Same AI, Different Results. I like that title because it sounds almost unfair. If we all have access to the same AI models, the same tools, the same chat windows, why do the results differ so much? One person gets a useful plan. Another gets generic fluff. One team gets production-ready work. Another gets a pile of review comments. My argument today is simple: the difference is not mainly the model. The difference is the knowledge around the model. AI is becoming widely available. What is not evenly distributed is context, memory, judgement, standards, and the ability for agents to learn from what already happened."
+      text: "The title of this talk is Same AI, Different Results. I like it because it sounds almost unfair. We all have access to strong models now. We all have chat windows. We all have tools that can write, summarize, code, and plan. So why do the outcomes differ so much? Why does one team get something useful while another gets polished nonsense? My argument is simple. The difference is not mainly the model. The difference is whether the AI can work with the memory of the organization. In the age of AI, intelligence is becoming common. Context is not. Judgment is not. Shared memory is not. That is where the real difference starts."
     },
     {
       minute: "01:00-02:00",
-      title: "The Familiar Moment",
+      title: "The Familiar Scene",
       slide: "Slide 2",
-      text: "Let me start with a scene most of us recognize. Two people sit down with the same AI. They ask almost the same question. Maybe it is a developer asking for an implementation plan. Maybe it is a teacher asking for lesson material. Maybe it is a manager asking for a project brief. Both answers sound confident. Both answers are reasonable. But they are not the same. One fits the local reality. The other misses the hidden rules. It uses the wrong terminology, ignores a previous decision, suggests a tool the team already rejected, or solves a problem the organization does not actually have. The prompt was similar. The model was similar. The world behind the prompt was not."
+      text: "Let me start with a scene most of us know. Two people ask almost the same thing. Maybe it is a teacher asking for a lesson plan. Maybe it is a manager asking for a brief. Maybe it is a developer asking for an implementation plan. Both answers sound good. Both are fluent. But one fits the local reality and the other does not. One uses the right language. The other ignores a rule, misses an exception, or suggests something the team already rejected. The prompt was similar. The model was similar. The hidden context was not. That is the basic puzzle behind this talk."
     },
     {
       minute: "02:00-03:00",
-      title: "Why Prompting Is Not Enough",
+      title: "Why Better Prompting Is Not Enough",
       slide: "Slide 2",
-      text: "When this happens, we often blame the prompt. We say: I should have written better instructions. Sometimes that is true. But after a while, better prompting becomes a strange way to run an organization. It means every person has to manually carry the company in their head and paste it into the chat again and again. Please remember our standards. Please remember how we talk to customers. Please remember the architecture. Please remember what the board decided last month. That is not a workflow. That is humans acting as memory sticks for machines. The more agents we use, the more expensive this becomes. We need the knowledge to live somewhere the agents can actually use."
+      text: "When this happens, we often blame the prompt. We say we should have asked better. Sometimes that is true. But after a while that becomes a strange way to run a company. It means every person has to carry the organization in their own head and paste it into the chat again and again. Please remember our standards. Please remember our customer promises. Please remember why we built it this way. Please remember what legal said last month. That is not a system. That is humans acting as memory sticks for machines. The more agents we use, the more expensive that becomes. The memory needs a better home."
     },
     {
       minute: "03:00-04:00",
-      title: "The Technology Shock",
+      title: "AI Is A Shock. Coherence Is The Question.",
       slide: "Slide 3",
-      text: "On Wednesday, 6 May, at the AI strategy launch at Smæran, Hans Kári Vang framed AI as a general-purpose technology, like electricity, steam, or the internet. That matters because general-purpose technologies do not land neatly. They do not simply remove a fixed percentage of jobs and call it a day. They change tasks, prices, expectations, and behavior. Some work is automated. Some work becomes more productive. Some work is affected indirectly. And there is uncertainty about timing. The important point for this audience is that we should not only ask, will AI change my profession? It will. The better question is: when the tools multiply, what keeps the work coherent?"
+      text: "This matters because AI is not a small feature. It is a general-purpose technology. It changes many kinds of work at once. Some tasks get automated. Some get amplified. Some are changed indirectly because expectations change. That is why the jobs debate can be a bit too narrow. The question for this room is not only what AI will replace. The better question is this: when the tools multiply, what keeps the work coherent? What keeps a company, a public institution, or a professional practice from becoming a pile of disconnected outputs? That is where knowledge management becomes strategic again."
     },
     {
       minute: "04:00-05:00",
-      title: "Knowledge Work Is Judgement",
+      title: "What Gets Lost",
       slide: "Slide 4",
-      text: "Most knowledge work is not just producing words, code, slides, contracts, reports, or plans. Those are the visible outputs. Underneath them is judgement. Why did we choose this wording? Why did we avoid that vendor? Why do we onboard customers in this order? Why does this exception matter? Why is this number trusted and that one not trusted? An AI connected only to documents sees the output, but not the judgement that produced it. It sees the state of the work. It does not see the reasoning that made the state true. That is why generic AI can sound smart and still be locally wrong."
+      text: "Most knowledge work is not only about outputs. The visible part is the document, the policy, the slide deck, the code, the answer to the customer. Underneath that sits judgment. Why did we choose this path? What risk were we trying to avoid? Why do we use this wording and not that one? Which exception matters in practice? An AI connected only to files can often see the output. It cannot automatically see the reasoning that produced it. That is why generic AI can sound smart and still be locally wrong. It sees the surface of the work, not the logic underneath it."
     },
     {
       minute: "05:00-06:00",
-      title: "The Two Clocks",
+      title: "Two Kinds Of Context",
       slide: "Slide 4",
-      text: "A useful way to think about this is two clocks. The first is the state clock: what is true now. Your CRM has a deal stage. Your codebase has a configuration. Your policy document has a sentence. Your project plan has a deadline. The second is the event clock: what happened, in what order, and why. Who changed the deal stage? What tradeoff led to that configuration? Why was that sentence written carefully? What happened the last time we missed a deadline? Organizations are very good at storing state. They are much worse at storing reasoning. But reasoning is exactly what agents need if we want them to work like colleagues instead of autocomplete."
+      text: "A simple way to say this is that there are two kinds of context. First, there is what is true now. The current numbers. The current file. The current ticket. The current state of the world. That matters. But there is also why it became true. Why the team chose this path. What failed before. What constraint mattered. What exception keeps coming back. I like the shorthand: data context makes agents accurate. Decision context makes agents institutional. Usable is strongest in the second half of that sentence. It helps preserve the part organizations usually lose."
     },
     {
       minute: "06:00-07:00",
-      title: "Agents Raise The Stakes",
+      title: "What Usable Is",
       slide: "Slide 5",
-      text: "This becomes more important when we move from chatbots to agents. A chatbot answers. An agent acts. It reads files, calls tools, opens pull requests, books meetings, updates tickets, sends summaries, and sometimes runs while we are not watching. When the system is only answering, missing context is annoying. When the system is acting, missing context becomes a governance problem. The agent needs to know what matters before it acts. It also needs to leave something behind after it acts. Otherwise every run is a disposable event. You pay for the work, but you do not accumulate learning."
+      text: "So what is Usable really? Not mainly a knowledge base. Not a folder of PDFs. Not a wiki nobody updates. Not a frozen copy of every database. The best short description I found in our own material is this: Usable is organizational memory for AI agents. More precisely, governed organizational memory. A place where important decisions, standards, precedents, patterns, and lessons become available to people and agents at the moment work is happening. The point is not to make storage look clever. The point is to make real work less forgetful."
     },
     {
       minute: "07:00-08:00",
-      title: "What A Useful Knowledge Base Does",
+      title: "What Usable Is Not",
       slide: "Slide 5",
-      text: "So when I say knowledge base, I do not mean a folder of PDFs. I do not mean a wiki nobody updates. I do not mean a vector database with mystery chunks. I mean a working memory that agents can interact with. Before the agent acts, it can search the relevant standards, decisions, examples, and prior solutions. While it acts, it can cite the fragments that shaped its plan. After it acts, it can write back what was learned: what changed, what worked, what failed, what should be reused next time. That loop is the difference between AI as a tool and AI as a compounding capability."
+      text: "There is another important part of the current Usable story. We should not pretend that all truth should live inside one memory system. That would create stale confidence very quickly. Live facts should often stay in the live systems where they belong. The current customer status. The current inventory. The current operational state. Usable is strongest around durable learning and decision context. Store the rules, the reasons, the standards, the lessons, the map of where truth lives, and the permissions around it. Then let the agent fetch volatile facts live. That is a much cleaner product story."
     },
     {
       minute: "08:00-09:00",
-      title: "The Smallest Loop",
+      title: "The Loop That Compounds",
       slide: "Slide 6",
-      text: "This is the whole difference in one picture. Without a memory layer, the loop is almost comic: ask, get answer, forget. The next person asks again. The next agent starts from zero. The organization pays for intelligence, but throws away the learning. With Usable, the loop changes. Ask. Get answer. Capture what happened. Structure it into reusable knowledge. Retrieve it the next time work begins. If you do this for a day, it feels like documentation. If you do it for a month, it feels like onboarding. If you do it for six months, it becomes organizational memory. The same model now enters the room with history."
+      text: "This is the whole idea in one picture. Without a memory layer, the loop is simple and wasteful: ask, get answer, forget. The next person starts again. The next agent starts again. With a memory layer, the loop changes. Read before acting. Act. Capture what mattered. Govern it. Reuse it next time. That sounds small, but it changes everything. It moves AI from disposable help to compounding capability. It also reflects the product pattern we keep seeing: the agent is grounded in a workspace, it can reach the right local tools, and when the work is done it leaves something useful behind."
     },
     {
       minute: "09:00-10:00",
-      title: "Story: The TAKS Bot",
+      title: "Proof 1: TAKS",
       slide: "Slide 7",
-      text: "The TAKS bot is the public-service version of this story. And I love one detail: TAKS did not just launch an AI module. They introduced three new digital colleagues: Eyðei, which is how Faroese ears pronounce AI and which also works as a name, Tollakur, and Skatta Ró. That little bit of humour matters, because it makes a serious technology feel approachable. But underneath the friendly names is serious work. Tax is high-trust. People ask about deadlines, customs, deductions, and consequences. A generic chatbot is not enough. Eyðei has to be grounded in official TAKS knowledge, show caution around sources, and leave feedback and analytics behind. That is why this case worked: not because the bot had a cute face, but because the conversation was connected to a structured knowledge workspace."
+      text: "The TAKS case is a very good public example of this. The assistant is called Eydei, which sounds like AI in Faroese, and TAKS even gave the wider cast names like Tollakur and Skatta Ro. It is friendly on the surface, but the real point is deeper. Tax is high-trust work. People ask about deadlines, customs, deductions, and consequences. A generic bot is not enough. The assistant has to be grounded in official material. It has to be careful with sources. It has to improve from what happens in the real workflow. That is why this story matters. The value is not the chat face. The value is the governed memory behind it."
     },
     {
       minute: "10:00-11:00",
-      title: "Story: From Fast To Aligned",
+      title: "Proof 2: Julius",
       slide: "Slide 8",
-      text: "Before the next examples, the context matters. On Thursday, 7 May, at Reinsaríið, the Usable Fragments event had talks by Julius, Jaspur, Jóhann and Brian, plus guest speaker Ajit Jaokar. Julius's From Fast to Aligned was the software-development version of the same idea. His point was not simply that AI makes developers faster. His point was that speed creates a new process problem: three good developers can ask the same AI for the same feature and get three reasonable but different implementations. None are obviously wrong, but they do not fit together. Then code review becomes where the team pays the alignment tax. Julius showed a different workflow: start from a PRD in Usable, split it into aligned task fragments, enhance the plan with standards and prior solutions before code is written, implement and test, then write the learning back after the commit. That moves alignment from review time to plan time."
+      text: "Yesterday at Reinsarid, we looked at this from several angles. Julius gave the software-development version. His point was not just that AI makes developers faster. His point was that speed creates a new process problem. Three good developers can ask the same AI for the same feature and get three reasonable but different implementations. None are obviously crazy. They just do not fit together. Then the team pays the alignment tax at review time. Julius showed a better loop: start from a PRD, split into aligned tasks, enhance the plan with standards and prior learning before code is written, then write the lesson back after the commit. That moves alignment from review time to plan time."
     },
     {
       minute: "11:00-12:00",
-      title: "Story: The Strategy Project",
+      title: "The Pattern Repeats",
       slide: "Slide 9",
-      text: "At that same Usable Fragments event, Jaspur gave the national-strategy version of this story. A national AI strategy has many voices, sources, constraints, and months of context. Normally, a lot of that disappears into meeting notes, folders, and the heads of the people who were there. In the Usable version, the project memory becomes part of the deliverable. The strategy is not only a final PDF. It is a living memory layer that future phases can ask questions of. That matters because the next phase does not restart from zero. It can work from accumulated project knowledge, not a generic idea of what a strategy should look like. The output is still a strategy, but the deeper asset is the trace of how the strategy was made."
+      text: "What struck me yesterday was not that we had several talks. It was that the same missing layer kept showing up in very different domains. In Jaspur's strategy work, the project memory became part of the deliverable. The value was not only the final document, but the reasoning trail behind it. In Johann's game-development work, the breakthrough came when the project stopped living only in the latest prompt. The agent got better when it could return to a workspace with history. Different domain. Same pattern. The tool gets more useful when it can stand on accumulated local context instead of improvising from scratch every time."
     },
     {
       minute: "12:00-13:00",
-      title: "Story: The Game Project",
-      slide: "Slide 10",
-      text: "At the same event, Jóhann's game development story showed the same pattern in a very different domain. At first, AI can feel like a magic prompt box. Ask for a feature, get some code, push it around, ask again. But game development quickly exposes the limits of that. There is game feel, mechanics, visual language, constraints, experiments, things that were tried and rejected. The breakthrough was building a dedicated workspace for the project. The conversation stopped being a one-shot prompt and became a dialogue with memory. The agent could refer back to the world of the game, not just the latest message. Again: same AI, but now grounded in a richer local context."
+      title: "More Than One Interface",
+      slide: "Slide 9",
+      text: "Brian and Ajit push the same idea further. Brian's operators showed that the important thing is not the surface. Slack, IDE, browser, terminal, phone: those are interfaces. The durable part is the memory layer underneath, plus the harness around it. Ajit then gave the conceptual language for the frontier. If we want agents to improve, we need more than retrieval. We need traces of how decisions were made and what happened next. That is when memory starts becoming precedent. And that is when knowledge management begins to feel modern again instead of old-fashioned."
     },
     {
       minute: "13:00-14:00",
-      title: "Story: Two Operators",
-      slide: "Slide 11",
-      text: "At the same event, Brian's talk took it one level further: autonomous operators. One personal operator, one production operator. Same general engine, very different harness. The personal one can run with more freedom. The production one needs branch protection, observability, pull requests, and review. But the load-bearing part was the same: memory first. The operators read from Usable before acting and write results back afterwards. This is important because it moves us away from thinking about AI as one interface. Slack, IDE, browser, terminal, phone - those are surfaces. The durable thing is the memory layer underneath."
+      title: "What A Decision Trace Is",
+      slide: "Slide 10",
+      text: "A decision trace is easier to explain than it sounds. It says: what did we observe, what constraint mattered, what tradeoff did we make, what action did we take, and what happened afterwards? That is different from a log. A log says what happened. A decision trace tries to preserve why it happened. This is one of the deepest points in the current Usable story. Organizations already store lots of output. Much fewer store chains of judgment that an agent can actually reuse. Once you preserve that chain, memory becomes more valuable than search alone."
     },
     {
       minute: "14:00-15:00",
-      title: "Decision Traces And Context Graphs",
-      slide: "Slide 12",
-      text: "Now for the cutting-edge part. Ajit Jaokar's guest talk at the same Usable Fragments event presented Context Graphs, which is a useful way to think about the next step. It is not just storing more content. It is connecting context, decisions, and consequences so an agent can reason over them. A decision trace says: what did we observe, what constraints mattered, what tradeoff did we make, what action did we take, and what happened afterwards? This is different from a log. A log says what happened. A decision trace tries to preserve why it happened. Agents do not only need retrieval. They need precedent."
+      title: "Precedent And Boundaries",
+      slide: "Slide 10",
+      text: "Ajit's context-graph framing is useful because it points beyond document retrieval. The goal is not just to find similar text. The goal is to understand relationships between decisions, exceptions, actions, and outcomes. But there is another deep point here. One big company brain is not the answer. The hard part is governing the overlap. The sales assistant should not see board material. The engineering agent should not get every private HR note. Good organizational memory is not only rich. It is well-bounded. That is why governed memory matters so much."
     },
     {
       minute: "15:00-16:00",
-      title: "From Search To Simulation",
-      slide: "Slide 13",
-      text: "This is where the phrase knowledge management becomes too small, and organizational intelligence becomes more accurate. Your real asset is not only data. It is accumulated judgement: how your team handles exceptions, how your profession interprets constraints, how your customers react when something changes, how a senior person sees risk before a junior person can name it. A simple test is this: can your system answer what-if questions grounded in your own history? Not just, find me a document. But: what usually happens when we make this kind of change? Which stakeholders tend to care? What broke last time? Which decision pattern are we repeating? That is the shift from retrieval to simulation. We are still early, but this is the direction. The best knowledge bases for agents will not only help them find facts. They will help them reason over precedent."
+      title: "Every Profession Has This",
+      slide: "Slide 11",
+      text: "This is not a software-only story. Every knowledge profession has local judgment that generic AI cannot guess. A teacher has examples that worked with a certain group. A lawyer has clause history and negotiation rationale. An engineer has incidents, standards, and scars. A manager has tradeoffs, promises, and stakeholder history. A founder has bets, signals, and lessons learned the hard way. The forms change, but the pattern does not. Good work depends on more than facts. It depends on remembered judgment in a specific context."
     },
     {
       minute: "16:00-17:00",
-      title: "Every Profession Has A Version",
-      slide: "Slide 14",
-      text: "This is not only a software story. A teacher has examples that worked with a certain age group. A lawyer has clauses and negotiation rationale. A doctor has triage judgement and exception paths. A civil servant has policy intent and institutional constraints. A manager has promises, tradeoffs, and stakeholder history. A researcher has sources, failed hypotheses, and gaps. Every knowledge profession contains local judgement that generic AI cannot guess. There is also a personal version: your best explanations, your preferred tone, the checklist you always rebuild, the examples that make your work recognizably yours. The tool can change. Your memory should travel with you."
+      title: "Personal Memory, Team Memory",
+      slide: "Slide 11",
+      text: "There is also a personal version and a team version. Your own best examples, checklists, and explanations matter. So do the standards that live only in the heads of experienced teammates. The opportunity is to make that knowledge reusable without pretending everyone should see everything. This is why I keep coming back to the word governed. The future is not one giant pile of memory. It is shared memory where it helps, local memory where it belongs, and clear boundaries in between. That is a more realistic vision of AI at work."
     },
     {
       minute: "17:00-18:00",
-      title: "Team Knowledge Bases",
-      slide: "Slide 15",
-      text: "There is also a team version. Capture the top five review comments you keep giving. Capture the standards that are obvious to insiders but invisible to newcomers. Capture the reason behind the architecture, not only the diagram. Capture the postmortem, but also the tradeoff that made the incident possible. Then connect the agent to that before it writes, plans, researches, or sends. This changes where quality control happens. Instead of correcting everything at review time, you move alignment earlier, into plan time. That is faster, but more importantly, it is calmer."
+      title: "Monday Morning, Part One",
+      slide: "Slide 12",
+      text: "So what should someone in this room do on Monday morning? First, pick one repeated workflow. Not the whole organization. One workflow. Second, capture the decisions and standards that shape good work in that workflow. What do experienced people know that newcomers or agents do not? Third, connect the agent to that memory before it acts. Do not wait until the review stage to add context. Bring the context earlier, into the plan and the first draft. That alone changes the quality of what comes back."
     },
     {
       minute: "18:00-19:00",
-      title: "The Monday Playbook",
-      slide: "Slide 15",
-      text: "So what should you do Monday morning? First, pick one repeated workflow. Not the whole organization. One workflow. Second, capture the standards and decisions that shape good work in that workflow. Third, make your AI agent search that memory before it acts. Fourth, ask it to cite the fragments that influenced important choices. Fifth, make the end of the task include a memory update: what changed, what was learned, what should the next person know? That is enough to start. You do not need a grand transformation program to stop throwing away learning."
+      title: "Monday Morning, Part Two",
+      slide: "Slide 12",
+      text: "Then do two more things. Let the agent reach the right local tools instead of guessing around them. And make the end of the task include a memory update. What changed? What was learned? What should the next person or next agent know? That is enough to start. You do not need a giant transformation program. You need one loop that stops throwing away learning. If you do that well, the benefit is not only speed. It is calm. Fewer repeated mistakes. Less re-explaining. Better first drafts. Better second runs."
     },
     {
       minute: "19:00-20:00",
       title: "Close",
-      slide: "Slide 16",
-      text: "I want to leave you with the title again: Same AI, Different Results. In the age of AI, everyone can buy access to intelligence. That means advantage moves somewhere else. It moves to context. It moves to judgement. It moves to the memory layer that makes your agents act like they understand your world. If you are a knowledge professional, your work already contains the material. The question is whether your agents can interact with it. Build that memory layer now. Let it read before it acts. Let it write back after it acts. Same AI. Different knowledge base. Different results. Thank you."
-    }
-  ]
+      slide: "Slide 13",
+      text: "I want to end where I began. Same AI. Different Results. In the age of AI, many people can buy access to intelligence. That means advantage moves somewhere else. It moves to owned memory. It moves to judgment made durable. It moves to whether your agents can work with the reality of your world instead of only the patterns of the internet. That is the story I think Usable is really telling now. Not just a knowledge base. Not just search. Governed organizational memory for AI agents. Build that layer well and the same model starts giving you very different outcomes. Thank you."
+    },
+  ],
 };
