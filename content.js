@@ -35,66 +35,72 @@ window.TONIK_TALK = {
     },
     {
       id: "technology-shock",
-      className: "slide--stats",
+      className: "slide--split slide--stats",
       cards: [4],
       html: `
-        <p class="eyebrow">AI AND WORK</p>
-        <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
-        <div class="stats-row">
-          <div><strong>25%</strong><span>work taken over</span></div>
-          <div><strong>25%</strong><span>work amplified</span></div>
-          <div><strong>50%</strong><span>indirectly affected</span></div>
+        <div class="split-copy">
+          <p class="eyebrow">AI AND WORK</p>
+          <h2>AI is a technology shock.<br><span>Coherence is the real question.</span></h2>
+          <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
         </div>
-        <p class="source">Framing inspired by Hans Kari Vang's AI strategy launch talk at Smaeran, Wednesday 6 May 2026.</p>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>25%</h3><p>work taken over</p></article>
+          <article class="float" style="--r:2deg;--d:-1.6s"><h3>25%</h3><p>work amplified</p></article>
+          <article class="float" style="--r:-2deg;--d:-3.2s"><h3>50%</h3><p>indirectly affected</p></article>
+        </div>
       `,
     },
     {
       id: "state-reasoning",
-      className: "slide--clocks",
+      className: "slide--split slide--clocks",
       cards: [5, 6],
       html: `
-        <p class="eyebrow">THE MISSING LAYER</p>
-        <h2>Most systems store what is true.<br><span>Very few store why it became true.</span></h2>
-        <div class="clock-grid">
-          <section>
+        <div class="split-copy">
+          <p class="eyebrow">THE MISSING LAYER</p>
+          <h2>Most systems store <b class="negation">what is true.</b><br><span>Very few store why it became true.</span></h2>
+        </div>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s">
             <h3>State clock</h3>
-            <p>Files, dashboards, tickets, contracts, code, meeting notes.</p>
-            <small>Data context makes agents accurate.</small>
-          </section>
-          <section class="hot">
+            <p>Files, dashboards, tickets, contracts, code, meeting notes. Data context makes agents accurate.</p>
+          </article>
+          <article class="float" style="--r:2deg;--d:-2.2s">
             <h3>Reasoning clock</h3>
-            <p>Why we chose it, what constrained us, what failed before, what mattered most.</p>
-            <small>Decision context makes agents institutional.</small>
-          </section>
+            <p>Why we chose it, what constrained us, what failed before, what mattered most. Decision context makes agents institutional.</p>
+          </article>
         </div>
       `,
     },
     {
       id: "agent-memory",
-      className: "slide--memory",
+      className: "slide--split slide--memory",
       cards: [7, 8],
       html: `
-        <div class="memory-copy">
+        <div class="split-copy">
           <p class="eyebrow">WHAT AGENTS NEED</p>
-          <h2>A knowledge base is not a folder.<br><span>It is organizational memory.</span></h2>
-          <p class="large-copy narrow">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
+          <h2>A knowledge base <b class="negation">is not a folder.</b><br><span>It is organizational memory.</span></h2>
+          <p class="large-copy">Usable is governed organizational memory for AI agents: a working layer they can read before acting and update after acting.</p>
+          <div class="verb-ring">
+            <span>read before acting</span>
+            <span>use local tools</span>
+            <span>govern access</span>
+            <span>write back learning</span>
+          </div>
         </div>
-        <img class="memory-art" src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
-        <div class="verb-ring">
-          <span>read before acting</span>
-          <span>use local tools</span>
-          <span>govern access</span>
-          <span>write back learning</span>
+        <div class="image-stage">
+          <img src="./assets/memory-layer.png" alt="A central knowledge layer connected to many smaller blocks">
         </div>
       `,
     },
     {
       id: "usable-loop",
-      className: "slide--loop",
+      className: "slide--split slide--loop",
       cards: [9],
       html: `
-        <p class="eyebrow">THE SMALLEST LOOP</p>
-        <h2>One loop forgets.<br><span>One loop compounds.</span></h2>
+        <div class="split-copy">
+          <p class="eyebrow">THE SMALLEST LOOP</p>
+          <h2>One loop forgets.<br><span>One loop compounds.</span></h2>
+        </div>
         <div class="loop-grid">
           <section class="loop-panel loop-panel--forget">
             <p class="loop-label">Without a memory layer</p>
@@ -140,104 +146,113 @@ window.TONIK_TALK = {
     },
     {
       id: "devmode-story",
-      className: "slide--devmode",
+      className: "slide--split slide--devmode",
       cards: [11],
       html: `
-        <p class="eyebrow">PROOF 2 · SOFTWARE DEVELOPMENT</p>
-        <h2>Fast code is easy.<br><span>Aligned code is engineered.</span></h2>
-        <div class="devmode-flow" aria-label="Usable development alignment loop">
-          <span>PRD</span>
-          <b></b>
-          <span>aligned tasks</span>
-          <b></b>
-          <span>enhanced plan</span>
-          <b></b>
-          <span>tested code</span>
-          <b></b>
-          <span>commit + learn</span>
+        <div class="split-copy">
+          <p class="eyebrow">PROOF 2 · SOFTWARE DEVELOPMENT</p>
+          <h2>Fast code is easy.<br><span>Aligned code is engineered.</span></h2>
+          <div class="devmode-contrast">
+            <span>review-time cleanup</span>
+            <strong>→</strong>
+            <span>plan-time alignment</span>
+          </div>
+          <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
         </div>
-        <div class="devmode-contrast">
-          <span>review-time cleanup</span>
-          <strong>→</strong>
-          <span>plan-time alignment</span>
+        <div class="flow-stack" aria-label="Usable development alignment loop">
+          <article><h3>PRD</h3><p>Start from a shared product spec.</p></article>
+          <article><h3>Aligned tasks</h3><p>Decompose with team standards.</p></article>
+          <article><h3>Enhanced plan</h3><p>Bring prior learning before code.</p></article>
+          <article><h3>Tested code</h3><p>Implement, verify, ship.</p></article>
+          <article class="hot"><h3>Commit + learn</h3><p>Write the lesson back to memory.</p></article>
         </div>
-        <p class="source">Julius a Rogvi Biskopsto · the Usable development process in practice</p>
       `,
     },
     {
       id: "pattern-repeats",
-      className: "slide--pattern",
+      className: "slide--split slide--pattern",
       cards: [12, 13],
       html: `
-        <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
-        <h2>The pattern repeats.</h2>
-        <div class="pattern-grid">
-          <article>
+        <div class="split-copy">
+          <p class="eyebrow">PROOF 3 · THE PATTERN REPEATS</p>
+          <h2 class="solo">The pattern repeats.</h2>
+        </div>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s">
             <h3>Jaspur</h3>
             <p>The project memory became part of the deliverable.</p>
           </article>
-          <article>
+          <article class="float" style="--r:2deg;--d:-1.4s">
             <h3>Johann</h3>
             <p>Games improved when the project stopped living only in the latest prompt.</p>
           </article>
-          <article>
+          <article class="float" style="--r:-2deg;--d:-2.8s">
             <h3>Brian</h3>
             <p>Operators need memory, boundaries, and writeback.</p>
           </article>
-          <article>
+          <article class="float" style="--r:2deg;--d:-4.2s">
             <h3>Ajit</h3>
-            <p>Precedent matters: decisions, relationships, and outcomes agents can reuse.</p>
+            <p>Precedent matters: decisions, relationships, outcomes agents can reuse.</p>
           </article>
         </div>
       `,
     },
     {
       id: "decision-traces",
-      className: "slide--trace",
+      className: "slide--split slide--trace",
       cards: [14, 15],
       html: `
-        <p class="eyebrow">THE FRONTIER</p>
-        <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
-        <div class="trace-chain">
-          <span>Observed</span>
-          <span>Constraint</span>
-          <span>Tradeoff</span>
-          <span>Action</span>
-          <span>Outcome</span>
+        <div class="split-copy">
+          <p class="eyebrow">THE FRONTIER</p>
+          <h2>Decision traces turn memory into<br><span>precedent.</span></h2>
+        </div>
+        <div class="trace-stack">
+          <svg class="trace-vline" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 5 0 L 5 100" />
+          </svg>
+          <article class="trace-card"><h3>Observed</h3><p>What happened in the workflow.</p></article>
+          <article class="trace-card"><h3>Constraint</h3><p>What rule or limit applied.</p></article>
+          <article class="trace-card"><h3>Tradeoff</h3><p>What was weighed against what.</p></article>
+          <article class="trace-card"><h3>Action</h3><p>What the agent or team did.</p></article>
+          <article class="trace-card hot"><h3>Outcome</h3><p>What happened next, ready to reuse.</p></article>
         </div>
       `,
     },
     {
       id: "professions",
-      className: "slide--professions",
+      className: "slide--split slide--professions",
       cards: [16, 17],
       html: `
-        <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
-        <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
-        <div class="profession-grid">
-          <span>Teacher: what examples worked</span>
-          <span>Lawyer: why that clause moved</span>
-          <span>Engineer: decisions and incidents</span>
-          <span>Manager: promises and tradeoffs</span>
-          <span>Researcher: sources and gaps</span>
-          <span>Founder: bets, signals, and lessons</span>
+        <div class="split-copy">
+          <p class="eyebrow">EVERY KNOWLEDGE PROFESSION</p>
+          <h2>Every knowledge profession has<br><span>local judgement.</span></h2>
+        </div>
+        <div class="chips-stage">
+          <article class="float" style="--r:-2deg;--d:0s"><h3>Teacher</h3><p>What examples worked.</p></article>
+          <article class="float" style="--r:2deg;--d:-1s"><h3>Lawyer</h3><p>Why that clause moved.</p></article>
+          <article class="float" style="--r:-2deg;--d:-2s"><h3>Engineer</h3><p>Decisions and incidents.</p></article>
+          <article class="float" style="--r:2deg;--d:-3s"><h3>Manager</h3><p>Promises and tradeoffs.</p></article>
+          <article class="float" style="--r:-2deg;--d:-4s"><h3>Researcher</h3><p>Sources and gaps.</p></article>
+          <article class="float" style="--r:2deg;--d:-5s"><h3>Founder</h3><p>Bets, signals, lessons.</p></article>
         </div>
       `,
     },
     {
       id: "playbook",
-      className: "slide--playbook",
+      className: "slide--split slide--playbook",
       cards: [18, 19],
       html: `
-        <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
-        <h2>Start small.<br><span>Make every run compound.</span></h2>
-        <ol class="steps">
-          <li>Pick one repeated workflow.</li>
-          <li>Capture decisions and standards.</li>
-          <li>Connect the agent before it acts.</li>
-          <li>Let it reach the right tools.</li>
-          <li>Write back learning every time.</li>
-        </ol>
+        <div class="split-copy">
+          <p class="eyebrow">MONDAY MORNING PLAYBOOK</p>
+          <h2>Start small.<br><span>Make every run compound.</span></h2>
+        </div>
+        <div class="flow-stack" aria-label="Monday morning playbook">
+          <article><h3>01 · Pick one workflow</h3><p>One repeated, important loop.</p></article>
+          <article><h3>02 · Capture standards</h3><p>The decisions behind good work.</p></article>
+          <article><h3>03 · Connect first</h3><p>Bring memory in before the agent acts.</p></article>
+          <article><h3>04 · Reach the tools</h3><p>Let the agent use the right local tools.</p></article>
+          <article class="hot"><h3>05 · Write back</h3><p>End every task with a memory update.</p></article>
+        </div>
       `,
     },
     {
