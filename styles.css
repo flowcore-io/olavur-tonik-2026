@@ -1549,6 +1549,8 @@ body[data-mode="cards"] {
 }
 
 .speaker-card {
+  display: flex;
+  flex-direction: column;
   min-height: 420px;
   padding: 32px 34px;
   color: var(--ink);
@@ -1581,6 +1583,16 @@ body[data-mode="cards"] {
   font-size: 21px;
   line-height: 1.38;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+}
+
+.speaker-card__next {
+  margin-top: auto;
+  padding-top: 18px;
+  color: #fcaf2a;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @media screen {
@@ -2181,6 +2193,8 @@ body.print-cards .cards {
 }
 
 body.print-cards .speaker-card {
+  display: flex;
+  flex-direction: column;
   width: 210mm;
   height: 148mm;
   min-height: 0;
@@ -2203,6 +2217,11 @@ body.print-cards .speaker-card h1 {
 body.print-cards .speaker-card p {
   font-size: 15.5pt;
   line-height: 1.34;
+}
+
+body.print-cards .speaker-card__next {
+  padding-top: 8mm;
+  font-size: 14pt;
 }
 
 @page {
@@ -2256,6 +2275,8 @@ body.print-cards-2up .a4-card-sheet:last-child {
 }
 
 body.print-cards-2up .speaker-card {
+  display: flex;
+  flex-direction: column;
   width: 210mm;
   height: 148.5mm;
   min-height: 0;
@@ -2276,6 +2297,11 @@ body.print-cards-2up .speaker-card p {
 body.print-cards-2up .speaker-card header {
   margin-bottom: 12px;
   font-size: 11pt;
+}
+
+body.print-cards-2up .speaker-card__next {
+  padding-top: 6mm;
+  font-size: 13pt;
 }
 
 body.print-cards-2up .cut-line {

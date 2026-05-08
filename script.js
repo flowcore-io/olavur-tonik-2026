@@ -126,6 +126,13 @@
 
   function renderCards() {
     const cards = document.getElementById("cards");
+    const shouldAdvanceAfterCard = (index) => {
+      const card = talk.cards[index];
+      const nextCard = talk.cards[index + 1];
+      if (!card || !nextCard) return false;
+      return card.slide !== nextCard.slide;
+    };
+
     const cardHtml = (card, index) => `
       <article class="speaker-card">
         <header>
@@ -134,6 +141,7 @@
         </header>
         <h1>${esc(card.title)}</h1>
         <p>${esc(card.text)}</p>
+        ${shouldAdvanceAfterCard(index) ? '<footer class="speaker-card__next">NEXT</footer>' : ""}
       </article>
     `;
 
